@@ -4,7 +4,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
 database_connection = create_engine('mariadb+mariadbconnector://{}:{}@{}:{}/webshop'.format(USER_NAME, PASSWORD,
-                                                                                       HOST, PORT))
+                                                                                       HOST, PORT), echo=True)
 database_connection.connect()
 
 Session = sessionmaker(bind = database_connection)
@@ -15,12 +15,9 @@ Base = declarative_base()
 
 def create_database(engine=None, do_erase=False):
     from customer import Base
-
-
     if engine is None:
         engine = database_connection
 
-    register_things()
     if do_erase is True:  # erase the database
         # in case Base.metadata.drop_all(engine) does not work
         # list all tables here  classname.__table__.drop(bind=engine)
@@ -31,8 +28,4 @@ def create_database(engine=None, do_erase=False):
 
     # create tables
     Base.metadata.create_all(engine)
-
-def register_things():
-    pass
-
 
