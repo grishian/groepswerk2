@@ -1,5 +1,6 @@
 from config import USER_NAME, PASSWORD, HOST, PORT
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, text, Column, DateTime, Integer
+import datetime
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
@@ -12,9 +13,16 @@ session = Session()
 
 Base = declarative_base()
 
+class BaseObject(Base):
+    __abstract__ = True
+
+    id = Column('PK_ID', Integer, primary_key=True, index=True)
+    created_on = Column('F_CREATEON', DateTime, default=datetime.datetime.now())
+    updated_on = Column('F_UPDATEDON', DateTime, default=datetime.datetime.now(), onupdate=datetime.datetime.now())
+
 
 def create_database(engine=None, do_erase=False):
-    from customer import Base
+    from customer import BaseObject
     if engine is None:
         engine = database_connection
 
