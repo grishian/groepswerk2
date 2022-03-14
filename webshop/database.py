@@ -23,6 +23,10 @@ class BaseObject(Base):
 
 def create_database(engine=None, do_erase=False):
     from customer import BaseObject
+    from book import BaseObject
+    from ebook import BaseObject
+    from audiobook import BaseObject
+    from physicalbook import BaseObject
     if engine is None:
         engine = database_connection
 
