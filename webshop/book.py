@@ -2,7 +2,7 @@ from sqlalchemy import Column, String
 from database import BaseObject, session
 
 class Book(BaseObject):
-    __tablename__ = 'T_BOOK'
+    __abstract__ = True
 
     type = Column('F_TYPE', String(50), nullable = False) # dropdown menu
     title = Column('F_TITLE', String(300), nullable = False)
@@ -20,6 +20,17 @@ class Book(BaseObject):
 
 
 def add_book():
+
+    #book menu with if-statements
+    #input = input('What is book type: ')
+    # if input == 'ebook':
+        # b = add_ebook()
+        #...
+        #session.add(b)..
+    #if input == '...'
+    # if input == '...'
+
+
     b = Book()
     print('Adding book...')
 

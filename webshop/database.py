@@ -41,3 +41,26 @@ def create_database(engine=None, do_erase=False):
     # create tables
     Base.metadata.create_all(engine)
 
+def delete_tables():
+    from customer import Customer
+    from book import Book
+    from audiobook import AudioBook
+    from physicalbook import PhysicalBook
+    from ebook import EBook
+
+    print('Deleting tables...')
+
+    Base.metadata.drop_all(database_connection)
+
+    Book.__table__.drop(bind=database_connection)
+    AudioBook.__table__.drop(bind=database_connection)
+    PhysicalBook.__table__.drop(bind=database_connection)
+    EBook.__table__.drop(bind=database_connection)
+    Customer.__table__.drop(bind=database_connection)
+
+    #GrowRun.__table__.drop(bind=engine)
+    #Temperature.__table__.drop(bind=engine)
+
+
+
+    print('Tables deleted.')
