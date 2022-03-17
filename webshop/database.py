@@ -27,6 +27,8 @@ def create_database(engine=None, do_erase=False):
     from ebook import BaseObject
     from audiobook import BaseObject
     from physicalbook import BaseObject
+    from wishlist import BaseObject
+    
     if engine is None:
         engine = database_connection
 
