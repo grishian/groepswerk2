@@ -1,13 +1,11 @@
-'''from sqlalchemy import Column, String
-from database import session
-from books import Book
+from sqlalchemy import Column, String
+from database import BaseObject, session
+from book import Book
 
-class Ebook(Book):
+class EBook(Book):
     __tablename__ = 'T_EBOOK'
 
-    type = Column('F_TYPE', String(50), nullable = False) # fixed type
-    size = Column('F_SIZE', String(50), nullable = False) # size in characters
-
+    type = Column('F_TYPE', String(50), nullable = False, default = 'ebook')
 
 
 
@@ -15,4 +13,4 @@ class Ebook(Book):
         pass
     #some methods ...
 
-session.commit()'''
+session.commit()

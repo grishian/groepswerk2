@@ -23,7 +23,6 @@ class BaseObject(Base):
 
 def create_database(engine=None, do_erase=False):
     from customer import BaseObject
-    from book import BaseObject
     from ebook import BaseObject
     from audiobook import BaseObject
     from physicalbook import BaseObject
@@ -54,7 +53,6 @@ def delete_tables():
 
     Base.metadata.drop_all(database_connection)
 
-    Book.__table__.drop(bind=database_connection)
     AudioBook.__table__.drop(bind=database_connection)
     PhysicalBook.__table__.drop(bind=database_connection)
     EBook.__table__.drop(bind=database_connection)
