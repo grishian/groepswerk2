@@ -1,8 +1,8 @@
-from sqlalchemy import Column, String
-from database import BaseObject, session
-from book import Book
+'''from sqlalchemy import Column, String
+from database import session
+from books import Book
 
-class AudioBook(Book):
+class Audiobook(Book):
     __tablename__ = 'T_AUDIOBOOK'
 
     type = Column('F_TYPE', String(50), nullable = False) # fixed type
@@ -15,4 +15,5 @@ class AudioBook(Book):
         pass
     #some methods ...
 
-session.commit()
+
+session.commit()'''

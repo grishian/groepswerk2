@@ -23,10 +23,10 @@ class BaseObject(Base):
 
 def create_database(engine=None, do_erase=False):
     from customer import BaseObject
-    from book import BaseObject
-    from ebook import BaseObject
-    from audiobook import BaseObject
-    from physicalbook import BaseObject
+    from books import BaseObject, Book, Ebook, Audiobook, Physicalbook
+    #from ebook import BaseObject
+    #from audiobook import BaseObject
+    #from physicalbook import BaseObject
     if engine is None:
         engine = database_connection
 
@@ -43,23 +43,21 @@ def create_database(engine=None, do_erase=False):
 
 def delete_tables():
     from customer import Customer
-    from book import Book
-    from audiobook import AudioBook
-    from physicalbook import PhysicalBook
-    from ebook import EBook
+    from books import Book, Audiobook, Ebook, Physicalbook
+    #from audiobook import Audiobook
+    #from physicalbook import Physicalbook
+    #from ebook import Ebook
 
     print('Deleting tables...')
 
     Base.metadata.drop_all(database_connection)
 
     Book.__table__.drop(bind=database_connection)
-    AudioBook.__table__.drop(bind=database_connection)
-    PhysicalBook.__table__.drop(bind=database_connection)
-    EBook.__table__.drop(bind=database_connection)
+    Audiobook.__table__.drop(bind=database_connection)
+    Physicalbook.__table__.drop(bind=database_connection)
+    Ebook.__table__.drop(bind=database_connection)
     Customer.__table__.drop(bind=database_connection)
 
-    #GrowRun.__table__.drop(bind=engine)
-    #Temperature.__table__.drop(bind=engine)
 
 
 

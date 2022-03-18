@@ -1,8 +1,8 @@
-from sqlalchemy import Column, String
-from database import BaseObject, session
-from book import Book
+'''from sqlalchemy import Column, String
+from database import session
+from books import Book
 
-class PhysicalBook(Book):
+class Physicalbook(Book):
 
     __tablename__ = 'T_PHYSICALBOOK'
 
@@ -16,4 +16,5 @@ class PhysicalBook(Book):
         pass
     #some methods ...
 
-session.commit()
+
+session.commit()'''
