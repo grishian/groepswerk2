@@ -49,9 +49,10 @@ def delete_tables():
     from physicalbook import PhysicalBook
     from ebook import EBook
 
+
     print('Deleting tables...')
 
-    Base.metadata.drop_all(database_connection)
+    #Base.metadata.drop_all(database_connection)
 
     AudioBook.__table__.drop(bind=database_connection)
     PhysicalBook.__table__.drop(bind=database_connection)
