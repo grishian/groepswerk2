@@ -2,7 +2,7 @@ from utils import print_title
 from inputs import get_input_item
 from database import delete_tables, create_database
 from customer import add_customer
-from book_functions import add_book
+from book import add_book
 
 def main_menu():
     print_title('Menu')
