@@ -1,0 +1,23 @@
+
+customers:grishian
+	adress opsplitsen meerdere kolommen
+	change_customer aanmaken zoals book
+book:hande
+	change_book
+	
+databank script:hande
+	tekstbestand met records voor makkelijk in de tabellen te steken
+
+
+
+
+
+
+
+
+
+
+
+
+
+
