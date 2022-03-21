@@ -48,5 +48,12 @@ def remove_book():
     #del_sel_book = delete(t_book).where(t_book.isbn == '{}'.format(isbn))
     #print(del_sel_book)
 
+    #User.query.filter_by(id=123).delete()
+    #session.query(GrowRun).get(previous_id)
+
+    input_isbn = input('Which book would you like to delete? Please give in the isbn: ')
+    
+    session.query(Book).filter_by(isbn=input_isbn).delete()
+
     session.commit()
 
