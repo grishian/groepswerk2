@@ -36,17 +36,9 @@ def add_book():
     session.commit()
     
 def remove_book():
-    #t_book = __tablename__ = 'T_BOOK'
-    #isbn = input('Which book would you like to delete? Please give in the isbn: ')
+    input_isbn = input('Which book would you like to delete? Please give in the isbn: ')
     
-    #selected_books = session.query(Book).filter(b.isbn)
-    #selected_books.delete()
-
-    #selected_book = Book.query.filter_by(isbn = '{}'.format(b.isbn)).first()
-    #selected_book.delete(b)
-
-    #del_sel_book = delete(t_book).where(t_book.isbn == '{}'.format(isbn))
-    #print(del_sel_book)
-
+    session.query(Book).filter_by(isbn=input_isbn).delete()
+    
     session.commit()
 
