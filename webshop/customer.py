@@ -20,7 +20,6 @@ class Customer(BaseObject):
 
 def add_customer():
     c = Customer()
-    print('Adding customer...')
     
     c.name = input('Give customer name: ')
     c.customer_id = input('Give unique customer_id: ')

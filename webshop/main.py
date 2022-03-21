@@ -2,14 +2,15 @@ from utils import print_title
 from inputs import get_input_item
 from database import delete_tables, create_database
 from customer import add_customer
-from book import add_book
+from book import add_book, remove_book
 
 def main_menu():
     print_title('Menu')
     options = {1: 'delete tables',
                2: 'add tables',
                3: 'add customer',
-               4: 'add book'
+               4: 'add book',
+               5: 'remove book'
                }
 
     for option in options:
@@ -29,6 +30,9 @@ def main_menu():
     if choice == 4:
         print_title('Adding book:')
         add_book()
+    if choice == 5:
+        print_title('Removing book:')
+        remove_book()
 
     print_title('Finished...')
 

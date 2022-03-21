@@ -1,4 +1,5 @@
-from sqlalchemy import Column, String
+from soupsieve import select
+from sqlalchemy import Column, String, delete
 from database import BaseObject, session
 
 class Book(BaseObject):
@@ -20,7 +21,6 @@ class Book(BaseObject):
 
 def add_book():
     b = Book()
-    print('Adding book...')
 
     b.type = input('Which type of book would you like to add? (Choose from "ebook", "audiobook" or "physicalbook"): ')
     b.title = input('Give book title: ')
@@ -31,8 +31,22 @@ def add_book():
     b.language = input('Choose language: ') 
     b.series = input('Give book series: ')
     b.size = input('Give book size (in characters, words or pages): ') 
+    
     session.add(b)
     session.commit()
     
 def remove_book():
-    pass
+    #t_book = __tablename__ = 'T_BOOK'
+    #isbn = input('Which book would you like to delete? Please give in the isbn: ')
+    
+    #selected_books = session.query(Book).filter(b.isbn)
+    #selected_books.delete()
+
+    #selected_book = Book.query.filter_by(isbn = '{}'.format(b.isbn)).first()
+    #selected_book.delete(b)
+
+    #del_sel_book = delete(t_book).where(t_book.isbn == '{}'.format(isbn))
+    #print(del_sel_book)
+
+    session.commit()
+

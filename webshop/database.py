@@ -44,8 +44,6 @@ def delete_tables():
     from book import Book
 
 
-    print('Deleting tables...')
-
     #Base.metadata.drop_all(database_connection)
 
     Book.__table__.drop(bind=database_connection)
