@@ -14,6 +14,9 @@ class Customer(BaseObject):
     mail = Column('F_MAIL', String(255), nullable=False, unique=True)
     wishlist_id = Column('F_WHISLIST_id', String(15), nullable=True, unique=True)
 
+    #create extra columns for adress: country, city, street, nr+extra, zip
+
+
     def __str__(self):
         pass
     #some methods ...
@@ -28,6 +31,9 @@ def add_customer():
 
     session.add(c)
     session.commit()
+
+
+# change_customer function
 
 
 
