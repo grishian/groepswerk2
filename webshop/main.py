@@ -1,6 +1,6 @@
 from utils import print_title
 from inputs import get_input_item
-from database import delete_tables, create_database, session
+from database import delete_tables, create_database, insert_book_data, insert_customer_data, session
 from customer import add_customer
 from book import add_book, remove_book, search_book, change_book
 
@@ -12,7 +12,9 @@ def main_menu():
                4: 'add book',
                5: 'remove book',
                6: 'search book',
-               7: 'change book'
+               7: 'change book',
+               8: 'insert customer data',
+               9: 'insert book data'
                }
 
     for option in options:
@@ -42,6 +44,12 @@ def main_menu():
     if choice == 7:
         print_title('Changing book:')
         change_book()
+    if choice == 8:
+        print_title('Inserting customer data...')
+        insert_customer_data()
+    if choice == 9:
+        print_title('Inserting book data...')
+        insert_book_data()
 
     print_title('Finished...')
 

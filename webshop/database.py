@@ -3,6 +3,7 @@ from sqlalchemy import create_engine, text, Column, DateTime, Integer
 import datetime
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
+import mariadb
 
 database_connection = create_engine('mariadb+mariadbconnector://{}:{}@{}:{}/webshop'.format(USER_NAME, PASSWORD,
                                                                                        HOST, PORT), echo=True)
@@ -52,3 +53,25 @@ def delete_tables():
 
 
     print('Tables deleted.')
+
+def insert_customer_data():
+    cursor = session.cursor()
+
+    file = (r"C:\Users\hande\Desktop\Syntra\group_project_2\webshop\customer_data.txt", 'r')
+    file_content = file.read()
+    file.close()
+
+    query = "INSERT INTO t_customer(name, customer_id, phone_nr, mail) VALUES (%s,%s,%s,%s)"
+
+    cursor.execute(query, (file_content,))
+
+def insert_book_data():
+    cursor = session.cursor()
+
+    file = (r"C:\Users\hande\Desktop\Syntra\group_project_2\webshop\book_data.txt", 'r')
+    file_content = file.read()
+    file.close()
+
+    query = "INSERT INTO t_book(type, title, author, isbn, genre, price, language, series, size) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+
+    cursor.execute(query, (file_content,))

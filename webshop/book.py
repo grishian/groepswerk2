@@ -78,17 +78,39 @@ def change_book(): #in progress
         print_title('Change type:')
         book_type = get_input_item('Give new type: ')
         book_qry.one().type = book_type
-
-    '''    
     if choice == 2:
-        ...
+        print_title('Change title:')
+        book_title = get_input_item('Give new title: ')
+        book_qry.one().type = book_title
     if choice == 3:
-        ...
+        print_title('Change author:')
+        book_author = get_input_item('Give new author: ')
+        book_qry.one().type = book_author
     if choice == 4:
-        ...
+        print_title('Change isbn:')
+        book_isbn = get_input_item('Give new isbn: ')
+        book_qry.one().type = book_isbn
     if choice == 5:
-        ...
-    '''
+        print_title('Change genre:')
+        book_genre = get_input_item('Give new genre: ')
+        book_qry.one().type = book_genre
+    if choice == 6:
+        print_title('Change price:')
+        book_price = get_input_item('Give new price: ')
+        book_qry.one().type = book_price
+    if choice == 7:
+        print_title('Change language:')
+        book_lang = get_input_item('Give new language: ')
+        book_qry.one().type = book_lang
+    if choice == 8:
+        print_title('Change series:')
+        book_ser = get_input_item('Give new series: ')
+        book_qry.one().type = book_ser
+    if choice == 9:
+        print_title('Change size:')
+        book_size = get_input_item('Give new size: ')
+        book_qry.one().type = book_size
+
 
     session.commit()
 
