@@ -1,5 +1,5 @@
-Hande   35428   0032487956154   hande.blabla@hotmail.com
-Grishian    15879   003257894578    grish.blabla@hotmail.com
-Jasper  15486   002548578945    jasp.blabla@hotmail.com
-Florian 14897   002547896547    flor.blabla@hotmail.com
-Hannes  54879   004258796541    hannes.blabla@hotmail.com
+Hande:35428:0032487956154:hande.blabla@hotmail.com
+Grishian:15879:003257894578:grish.blabla@hotmail.com
+Jasper:15486:002548578945:jasp.blabla@hotmail.com
+Florian:14897:002547896547:flor.blabla@hotmail.com
+Hannes:54879:004258796541:hannes.blabla@hotmail.com
