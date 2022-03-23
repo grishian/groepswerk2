@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eed24af7-6005-4dae-8463-7560dd151f38" name="Changes" comment="" />
+    <list default="true" id="eed24af7-6005-4dae-8463-7560dd151f38" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../analyse/to_do_next_time.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../analyse/to_do_next_time.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../analyse/to_do_next_time.txt.bak" beforeDir="false" afterPath="$PROJECT_DIR$/../analyse/to_do_next_time.txt.bak" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -79,6 +82,7 @@
       <workItem from="1647980492676" duration="857000" />
       <workItem from="1648036856338" duration="368000" />
       <workItem from="1648038712849" duration="338000" />
+      <workItem from="1648042495415" duration="8000" />
     </task>
     <servers />
   </component>
