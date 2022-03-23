@@ -1,5 +1,15 @@
+wishlist
+	- customerkolom toevoegen
+	- boekidkolom toevoegen
+	- functie toevoegen add_to_wishlist
+customer
+	- customer_id verwijderen
+	- addcustomer
+		- customer_id verwijderen
+	- customer moet add_to_wishlist kunnen
+	- zodra een customer wordt aangemaakt, wordt een lege wishlist aangemaakt
+	
 
-os.getenv('key'): gelukt
 
 
 

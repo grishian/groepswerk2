@@ -1,14 +1,22 @@
 wishlist
 	- customerkolom toevoegen
 	- boekidkolom toevoegen
-	- functie toevoegen add_to_wishlist
+	- functie toevoegen 
+		- add_book
+		- delete_book
 customer
 	- customer_id verwijderen
 	- addcustomer
 		- customer_id verwijderen
-	- customer moet add_to_wishlist kunnen
 	- zodra een customer wordt aangemaakt, wordt een lege wishlist aangemaakt
-	
+	- customer functie
+		- verwijder_boek_wishlist
+			- hier nog over nadenken
+			- veel mogelijkheden
+		- add_to_wishlist
+		
+omzetten naar Model Views...
+		
 
 
 
