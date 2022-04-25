@@ -1,9 +1,11 @@
 
+
+{% for book in books %}
 <h2>
-    book_title
+    {{book.title}}
 </h2>
 <p>
-    a litle book_info
+    {{book.author}}
 </p>
-
+{% endfor %}
 
