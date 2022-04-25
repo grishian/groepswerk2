@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eed24af7-6005-4dae-8463-7560dd151f38" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/myapp/bp_user/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myapp/bp_user/views_user.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myapp/templates/user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/templates/general/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/templates/general/home.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +38,9 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\grish\Documents\school\python\groepswerk2\webshop" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\grish\Documents\school\python\groepswerk2\webshop\myapp\templates\user" />
     </key>
   </component>
   <component name="RunManager">
@@ -86,7 +87,7 @@
       <workItem from="1648036856338" duration="368000" />
       <workItem from="1648038712849" duration="338000" />
       <workItem from="1648042495415" duration="8000" />
-      <workItem from="1650879958077" duration="1341000" />
+      <workItem from="1650879958077" duration="2023000" />
     </task>
     <servers />
   </component>

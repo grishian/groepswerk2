@@ -9,6 +9,31 @@
 
 </head>
 <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        {% set url = url_for('bp_general.do_home') %}
+                        <a class="nav-link{% if request.path == url %} active{% endif %}" aria-current="page" href="{{url}}">Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        {% set url = url_for('bp_user.do_user') %}
+                        <a class="nav-link{% if request.path == url %} active{% endif %}" aria-current="page" href="{{url}}">Profile
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
 {% block main_content %}
 {% endblock %}
 
