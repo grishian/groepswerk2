@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eed24af7-6005-4dae-8463-7560dd151f38" name="Changes" comment="" />
+    <list default="true" id="eed24af7-6005-4dae-8463-7560dd151f38" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/bp_book/views_book.py" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/bp_book/views_book.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/templates/book/_book.html" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/templates/book/_book.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/templates/general/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/templates/general/home.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,6 +16,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="Python Script" />
       </list>
     </option>
@@ -26,6 +33,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -35,9 +43,12 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\grish\Documents\school\python\groepswerk2\webshop" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\grish\Documents\school\python\groepswerk2\webshop\myapp\templates\user" />
+    </key>
   </component>
   <component name="RunManager">
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+    <configuration name="main_old" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="webshop" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -50,7 +61,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\grish\Documents\school\python\groepswerk2\webshop\main_old.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -78,6 +89,10 @@
       <workItem from="1647865393390" duration="4729000" />
       <workItem from="1647980492676" duration="857000" />
       <workItem from="1648036856338" duration="368000" />
+      <workItem from="1648038712849" duration="338000" />
+      <workItem from="1648042495415" duration="8000" />
+      <workItem from="1650879958077" duration="2624000" />
+      <workItem from="1650889060923" duration="7262000" />
     </task>
     <servers />
   </component>
