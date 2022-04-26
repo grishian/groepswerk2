@@ -48,12 +48,6 @@ def main_menu():
     if choice == 8:
         print_title('Changing customer:')
         change_customer()
-    if choice == 9:
-        print_title('Inserting customer data:')
-        insert_customer_data()
-    if choice == 10:
-        print_title('Inserting book data')
-        insert_book_data()
     print_title('Finished...')
 
 

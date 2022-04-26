@@ -15,13 +15,13 @@
 -- Dumpen data van tabel webshop.t_customer: ~2 rows (ongeveer)
 DELETE FROM `t_customer`;
 /*!40000 ALTER TABLE `t_customer` DISABLE KEYS */;
-INSERT INTO `t_customer` (`PK_ID`, `F_CREATEON`, `F_UPDATEDON`, `F_NAME`, `F_COUNTRY`, `F_CITY`, `F_STREET`, `F_NR_EXTRA`, `F_ZIP`, `F_CUSTOMER_ID`, `F_PHONE_NR`, `F_MAIL`, `F_WHISLIST_id`) VALUES
-	(1, '2022-03-22 21:33:29', '2022-03-22 21:35:16', 'Bob', NULL, NULL, NULL, NULL, NULL, '11000', '09999999', 'grishian1@hotmail.com', NULL),
-	(2, '2022-03-23 13:06:39', '2022-03-23 13:06:39', 'grishian', NULL, NULL, NULL, NULL, NULL, '90000', '08888888', 'grigri2@hotmail.odm', NULL),
-	(3, '2022-03-22 21:33:29', '2022-03-22 21:35:16', 'dirk', NULL, NULL, NULL, NULL, NULL, '1200', '09999999', 'grishian3@hotmail.com', NULL),
-	(4, '2022-03-23 13:06:39', '2022-03-23 13:06:39', 'jan', NULL, NULL, NULL, NULL, NULL, '93000', '08888888', 'grigri4@hotmail.odm', NULL),
-	(5, '2022-03-22 21:33:29', '2022-03-22 21:35:16', 'fien', NULL, NULL, NULL, NULL, NULL, '1400', '09999999', 'grishian5@hotmail.com', NULL),
-	(6, '2022-03-23 13:06:39', '2022-03-23 13:06:39', 'diter', NULL, NULL, NULL, NULL, NULL, '95000', '08888888', 'grigri6@hotmail.odm', NULL);
+INSERT INTO `t_customer` (`PK_ID`, `F_CREATEON`, `F_UPDATEDON`, `F_NAME`, `F_COUNTRY`, `F_CITY`, `F_STREET`, `F_NR_EXTRA`, `F_ZIP`, `F_PHONE_NR`, `F_MAIL`, `F_WHISLIST_id`) VALUES
+	(1, '2022-03-22 21:33:29', '2022-03-22 21:35:16', 'Bob', NULL, NULL, NULL, NULL, NULL, '09999999', 'grishian1@hotmail.com', NULL),
+	(2, '2022-03-23 13:06:39', '2022-03-23 13:06:39', 'grishian', NULL, NULL, NULL, NULL, NULL, '08888888', 'grigri2@hotmail.odm', NULL),
+	(3, '2022-03-22 21:33:29', '2022-03-22 21:35:16', 'dirk', NULL, NULL, NULL, NULL, NULL,, '09999999', 'grishian3@hotmail.com', NULL),
+	(4, '2022-03-23 13:06:39', '2022-03-23 13:06:39', 'jan', NULL, NULL, NULL, NULL, NULL, '08888888', 'grigri4@hotmail.odm', NULL),
+	(5, '2022-03-22 21:33:29', '2022-03-22 21:35:16', 'fien', NULL, NULL, NULL, NULL, NULL, '09999999', 'grishian5@hotmail.com', NULL),
+	(6, '2022-03-23 13:06:39', '2022-03-23 13:06:39', 'diter', NULL, NULL, NULL, NULL, NULL, '08888888', 'grigri6@hotmail.odm', NULL);
 /*!40000 ALTER TABLE `t_customer` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

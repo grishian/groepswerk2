@@ -54,9 +54,10 @@ def delete_tables():
     print('Tables deleted.')
 
 def insert_customer_data():
-    query = "LOAD DATA INFILE 'C:/Users/hande/Desktop/Syntra/group_project_2/webshop/customer_data.txt' INTO TABLE t_customer FIELDS TERMINATED BY ':' LINES TERMINATED BY '\r\n'"
-
-    return query
+    with database_connection.connect() as con:
+        with open("customer_data.sql") as file:
+            query = text(file.read())
+            con.execute(query)
     
 def insert_book_data():
     query = "LOAD DATA INFILE 'book_data.txt' INTO TABLE t_book FIELDS TERMINATED BY ':' LINES TERMINATED BY '\n'"
