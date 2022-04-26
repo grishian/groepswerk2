@@ -26,7 +26,9 @@ def do_register_blueprints(flaskapp):
     from myapp.bp_general import bp_general
     from myapp.bp_user import bp_user
     from myapp.bp_wishlist import bp_wishlist
+    from myapp.bp_book import bp_book
 
     flaskapp.register_blueprint(bp_general)
     flaskapp.register_blueprint(bp_user)
     flaskapp.register_blueprint(bp_wishlist)
+    flaskapp.register_blueprint(bp_book)
