@@ -1,6 +1,0 @@
-ebook:fallen:Lauren:1234567891011:fantasy:12:English:fallen:258
-ebook:hobbit:Tolkien:1234569872132:fantasy:9:English:lotr:415
-audiobook:Harrypotter:Rowling:15487953641:fantasy:21:Dutch:hp:320
-audiobook:Lavender:Stephenfry:125489762:novel:11:German:/N:45
-physicalbook:encanto:Linmanuelmiranda:1549785421:kids:15:Spanish:Disney:92
-physicalbook:ACOTAR:Sarahjmaas:2658794125:youngadult:16:English:Court:364
