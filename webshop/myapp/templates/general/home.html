@@ -1,24 +1,26 @@
 {% extends 'base.html' %}
 
 {% block main_content %}
-<h1>
-    This is Homepage via html.
-</h1>
+
 <h2>
-    All books:
+    Bookz
 </h2>
 <div>
     <div class="list-group">
         {% for book in books %}
-
-          <a href="{{ url_for('bp_book.do_book', isbn=book.isbn) }}" class="list-group-item list-group-item-action">
-                <h3>
-                    {{book.title}}
-                </h3>
-                <p>
-                    {{book.author}}
-                </p>
-          </a>
+        <a href="{{ url_for('bp_book.do_book', isbn=book.isbn) }}" class="list-group-item list-group-item-action">
+            <div class="d-flex align-items-stretch">
+                <img src="{{ book.cover }}" alt="{{book.title}}" style="width: 5%;">
+                <div class="mx-3">
+                    <h3>
+                        {{book.title}}
+                    </h3>
+                    <p>
+                        {{book.author}}
+                    </p>
+                </div>
+            </div>
+        </a>
         {% endfor %}
     </div>
 </div>

@@ -13,6 +13,9 @@ class Book(db.Model):
     language = db.Column('F_LANGUAGE', db.String(50), nullable=False)
     series = db.Column('F_SERIES', db.String (200), nullable=True)
     size = db.Column('F_SIZE', db.String(50), nullable=False)# size stands for pages, length(minutes), characters
+    synopsis = db.Column('F_SYNOPSIS', db.String(5000))
+    cover = db.Column('F_COVER', db.String(200))
+
 
     def __repr__(self):
         return '<Book_title: {}, Book_isbn: {}>'.format(self.title, self.isbn)

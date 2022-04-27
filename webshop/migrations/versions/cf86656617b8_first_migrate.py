@@ -1,8 +1,8 @@
-"""book table4
+"""first migrate
 
-Revision ID: 1463f7868ead
+Revision ID: cf86656617b8
 Revises: 
-Create Date: 2022-04-25 15:04:28.685608
+Create Date: 2022-04-27 16:04:12.326654
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '1463f7868ead'
+revision = 'cf86656617b8'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -28,6 +28,8 @@ def upgrade():
     sa.Column('F_LANGUAGE', sa.String(length=50), nullable=False),
     sa.Column('F_SERIES', sa.String(length=200), nullable=True),
     sa.Column('F_SIZE', sa.String(length=50), nullable=False),
+    sa.Column('F_SYNOPSIS', sa.String(length=5000), nullable=True),
+    sa.Column('F_COVER', sa.String(length=200), nullable=True),
     sa.PrimaryKeyConstraint('F_ISBN')
     )
     op.create_index(op.f('ix_T_BOOK_F_ISBN'), 'T_BOOK', ['F_ISBN'], unique=False)

@@ -1,41 +1,48 @@
 {% extends 'base.html' %}
 
 {% block main_content %}
-<div class="card" style="width: 18rem;">
-  <img src="https://sterkinmedia.nl/wp-content/uploads/2020/08/sterrenhemel-in-alaska.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">
-        {{ book.title }}
-    </h5>
-    <p class="card-text">
-      <p>
-        Author: {{book.author}}
-    </p>
-    <p>
-        Genre: {{book.genre}}
-    </p>
-    <p>
-        Series: {{book.series}}
-    </p>
-    <p>
-        Type: {{book.type}}
-    </p>
-    <p>
-        Language: {{book.language}}
-    </p>
-    <p>
-        Size: {{book.size}}
-    </p>
-    <p>
-        Isbn: {{book.isbn}}
-    </p>
-    </p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
+<div class="d-flex align-items-start mx-5 mt-5">
+    <div class="card" style="width: 18rem;">
+      <img src="{{book.cover}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">
+            {{ book.title }}
+        </h5>
+        <p class="card-text">
+          <p>
+            Author: {{book.author}}
+        </p>
+        <p>
+            Genre: {{book.genre}}
+        </p>
+        <p>
+            Series: {{book.series}}
+        </p>
+        <p>
+            Type: {{book.type}}
+        </p>
+        <p>
+            Language: {{book.language}}
+        </p>
+        <p>
+            Size: {{book.size}}
+        </p>
+        <p>
+            Isbn: {{book.isbn}}
+        </p>
+      </div>
+    </div>
+    <div class="mx-5" style="width: 60%;" >
     <h1>
-
+        Synopsis
     </h1>
+    <p>
+        {{book.synopsis}}
+    </p>
+    </div>
+
+</div>
+
 
 {% endblock %}
 
