@@ -27,9 +27,10 @@
                 <li class="nav-item">
                     {% set url = url_for('bp_general.do_home') %}
                     <a class="nav-link{% if request.path == url %} active{% endif %}" aria-current="page"
-                       href="{{url}}">Home
+                       href="{{url}}">Bookz
                     </a>
                 </li>
+                {% if current_user and current_user.is_authenticated %}
                 <li class="nav-item">
                     {% set url = url_for('bp_user.do_user') %}
                     <a class="nav-link{% if request.path == url %} active{% endif %}" aria-current="page"
@@ -42,7 +43,6 @@
                        href="{{url}}">Wishlist
                     </a>
                 </li>
-                {% if current_user and current_user.is_authenticated %}
                 <li class="nav-item">
                     {% set url = url_for('bp_user.do_logout') %}
                     <a class="nav-link{% if request.path == url %} active{% endif %}" aria-current="page"
@@ -60,7 +60,7 @@
     </div>
 </nav>
     <div class="tinyspace"></div>
-    <div class="container">
+    <div class="container mt-3">
         <div class="row">
             <div class="col">
                 {% with messages = get_flashed_messages(with_categories=true) %}
@@ -76,7 +76,7 @@
         </div>
     </div>
 
-<div class="container">
+<div class="container mt-3">
     {% block main_content %}
 
     {% endblock %}
