@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eed24af7-6005-4dae-8463-7560dd151f38" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/myapp/templates/user/register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myapp/bp_user/form_user.py" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/bp_user/form_user.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myapp/bp_user/views_user.py" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/bp_user/views_user.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myapp/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myapp/templates/general/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/templates/general/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/templates/user/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/templates/user/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/templates/user/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/templates/user/register.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +118,7 @@
       <workItem from="1651067786924" duration="303000" />
       <workItem from="1651068666196" duration="5057000" />
       <workItem from="1651130382887" duration="12144000" />
-      <workItem from="1651146675119" duration="2540000" />
+      <workItem from="1651146675119" duration="4204000" />
     </task>
     <servers />
   </component>

@@ -79,10 +79,12 @@ def do_register():
         user.email = form.email.data
         user.set_password(form.password.data)
         user.profile_type = 1
+        user.active = True
 
         db.session.add(user)
         db.session.commit()
 
+        flash('You are successfully registered.', 'OK')
         return redirect(url_for('bp_user.do_login', user_id=user.id))
 
     return render_template('user/register.html', form=form)

@@ -50,6 +50,11 @@
                 </li>
                 {% else %}
                 <li class="nav-item">
+                    {% set url = url_for('bp_user.do_register') %}
+                    <a class="nav-link{% if request.path == url %} active{% endif %}" aria-current="page"
+                       href="{{url}}"><i class="bi bi-box-arrow-in-left"></i> Register</a>
+                </li>
+                <li class="nav-item">
                     {% set url = url_for('bp_user.do_login') %}
                     <a class="nav-link{% if request.path == url %} active{% endif %}" aria-current="page"
                        href="{{url}}"><i class="bi bi-box-arrow-in-left"></i> Login</a>
@@ -60,7 +65,7 @@
     </div>
 </nav>
     <div class="tinyspace"></div>
-    <div class="container mt-3">
+    <div class="container mt-1">
         <div class="row">
             <div class="col">
                 {% with messages = get_flashed_messages(with_categories=true) %}
