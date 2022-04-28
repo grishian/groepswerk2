@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,11 +42,39 @@
                        href="{{url}}">Wishlist
                     </a>
                 </li>
-
+                {% if current_user and current_user.is_authenticated %}
+                <li class="nav-item">
+                    {% set url = url_for('bp_user.do_logout') %}
+                    <a class="nav-link{% if request.path == url %} active{% endif %}" aria-current="page"
+                       href="{{url}}">Logout <i class="bi bi-box-arrow-in-right"></i></a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    {% set url = url_for('bp_user.do_login') %}
+                    <a class="nav-link{% if request.path == url %} active{% endif %}" aria-current="page"
+                       href="{{url}}"><i class="bi bi-box-arrow-in-left"></i> Login</a>
+                </li>
+                {% endif %}
             </ul>
         </div>
     </div>
 </nav>
+    <div class="tinyspace"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="alert {% if category == 'OK' %}alert-success{% elif category == 'WARNING' %}alert-warning{% elif category == 'ERROR' %}alert-danger{% endif %} alert-dismissible fade show" role="alert">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+                {% endwith %}
+            </div>
+        </div>
+    </div>
 
 <div class="container">
     {% block main_content %}
