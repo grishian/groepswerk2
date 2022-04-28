@@ -17,5 +17,6 @@ class Book(db.Model):
     cover = db.Column('F_COVER', db.String(200))
 
 
+
     def __repr__(self):
         return '<Book_title: {}, Book_isbn: {}>'.format(self.title, self.isbn)

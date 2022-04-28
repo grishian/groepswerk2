@@ -19,6 +19,7 @@ class User(db.Model, UserMixin):
     # 0 - author
     # 1 - user
 
+
     def is_active(self):
         return self.active
 

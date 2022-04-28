@@ -47,8 +47,10 @@ def do_register_cli(flaskapp):
     from myapp.bp_general.utils_general import do_create_db
     from myapp.bp_user.cli_user import do_create_user
     from myapp.bp_book.cli_book import do_create_book
+    from myapp.bp_wishlist.cli_wishlist import do_create_wishlist
 
     flaskapp.cli.add_command(do_create_db)
     flaskapp.cli.add_command(do_create_user)
     flaskapp.cli.add_command(do_create_book)
+    flaskapp.cli.add_command(do_create_wishlist)
 
