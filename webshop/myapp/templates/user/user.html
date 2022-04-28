@@ -4,14 +4,17 @@
 <h1>
   {{current_user.username}}
 </h1>
-<h2>
-  Some personal information.
-</h2>
-<p>
-  personal info...
-  personal info...
-</p>
-<h2>
-  Link to wishlist?
-</h2>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Profile info</h5>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item"><p class="card-text">{{current_user.email}}</p></li>
+      <li class="list-group-item"><p class="card-text">Registerd on **/**/****</p></li>
+      <li class="list-group-item"><p class="card-text">...amount of books in wishlist...</p></li>
+      {% if current_user.is_author %}
+      <li class="list-group-item"><p class="card-text" style="color: red;">Is an admin.</p></li>
+      {% endif %}
+    </ul>
+  </div>
+</div>
 {% endblock %}
