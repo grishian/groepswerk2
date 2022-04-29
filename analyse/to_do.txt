@@ -1,0 +1,20 @@
+wishlist:
+	- webpage:
+		- alle boeken in user zijn wishlist weergeven
+		- voorlopig geen pagination
+		- voorlopig geen sorteer
+		- boeken verwijderen van wishlist
+user:
+	- wachtwoord aanpassen
+	- enkele user info aanpassen?
+
+unittests:
+	- flask-unittest?
+	- opzoeken hoe dit moet
+
+
+
+extra:
+	- vraag:
+		- wordt er met filter enkel: sorteer bedoelt?
+			- of ook search?
