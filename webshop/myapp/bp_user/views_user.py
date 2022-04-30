@@ -4,7 +4,7 @@ from flask_login import login_required, current_user, login_user, logout_user
 from myapp import db
 from myapp.bp_user import bp_user
 from myapp.bp_user.model_user import User, only_admins
-from myapp.bp_user.form_user import LoginForm, SignUpForm
+from myapp.bp_user.form_user import LoginForm, SignUpForm, ChangePasswordForm
 
 
 @bp_user.route('/user')
@@ -88,3 +88,27 @@ def do_register():
         return redirect(url_for('bp_user.do_login', user_id=user.id))
 
     return render_template('user/register.html', form=form)
+
+
+@bp_user.route('/change_password', methods=['GET', 'POST'])
+@login_required
+def do_change_password():
+    form = ChangePasswordForm()
+
+    if form.validate_on_submit():
+        user = current_user
+        old_password = form.old_password.data
+        new_password = form.new_password.data
+        repeat_password = form.repeat_password.data
+
+        if user.check_password(old_password):
+            if new_password == repeat_password:
+
+                user.set_password(new_password)
+                db.session.commit()
+
+                flash('Password changed.', 'OK')
+                return redirect(url_for('bp_user.do_login'))
+
+        flash('Wrong input, please re-enter passwords.', 'WARNING')
+    return render_template('user/change_password.html', form=form)

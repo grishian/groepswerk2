@@ -14,3 +14,11 @@ class SignUpForm(FlaskForm):
     username = StringField('Username', id='signup_username')
     password = PasswordField('Password', id='signup_password')
     submit = SubmitField('Submit', id='signup_submit')
+
+
+class ChangePasswordForm(FlaskForm):
+    old_password = PasswordField('Old password', id='change_password_old')
+    new_password = PasswordField('New password', id='change_password_new')
+    repeat_password= PasswordField('Repeat password', id='change_password_new2')
+    submit = SubmitField('Change password', id='change_password_submit')
+

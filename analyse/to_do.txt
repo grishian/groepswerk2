@@ -9,6 +9,10 @@ wishlist:
 user:
 	- wachtwoord aanpassen
 	- enkele user info aanpassen?
+	- profile
+		- amount wishlist books
+			- methode maken in Wishlist hiervoor
+	- blijkbaar zit in de login_view (user_id=id) dit is overbodig
 
 unittests:
 	- flask-unittest?
