@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eed24af7-6005-4dae-8463-7560dd151f38" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/myapp/templates/user/change_password.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../analyse/to_do.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../analyse/to_do.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myapp/bp_user/form_user.py" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/bp_user/form_user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myapp/bp_user/views_user.py" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/bp_user/views_user.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myapp/templates/user/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/templates/user/user.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -121,6 +118,7 @@
       <workItem from="1651130382887" duration="12144000" />
       <workItem from="1651146675119" duration="13071000" />
       <workItem from="1651303313079" duration="9433000" />
+      <workItem from="1651312849171" duration="1048000" />
     </task>
     <servers />
   </component>

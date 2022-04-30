@@ -14,6 +14,9 @@ user:
 			- methode maken in Wishlist hiervoor
 	- blijkbaar zit in de login_view (user_id=id) dit is overbodig
 
+home:
+	- filters maken
+
 unittests:
 	- flask-unittest?
 	- opzoeken hoe dit moet
@@ -24,3 +27,4 @@ extra:
 	- vraag:
 		- wordt er met filter enkel: sorteer bedoelt?
 			- of ook search?
+	- de site is niet smartphone vriendelijk
