@@ -46,6 +46,28 @@ def add_to_wishlist(isbn):
     return redirect(url_for('bp_wishlist.do_wishlist'))
 
 
+@bp_wishlist.route('/delete_from_my_wishlist/<isbn>', methods=["GET", "POST"])
+@login_required
+def delete_from_wishlist(isbn):
+
+    book = Book.query.filter_by(isbn=isbn).first_or_404()
+    user_id = current_user.id
+    my_wishlist_book_ids = []
+    my_wishlist_items = Wishlist.query.filter_by(user_id=user_id).all()
+    for wishlist_item in my_wishlist_items:
+        my_wishlist_book_ids.append(wishlist_item.book_id)
+
+    if isbn in my_wishlist_book_ids:
+
+        Wishlist.query.filter_by(book_id=isbn).delete()
+
+        db.session.commit()
+
+        flash('Book: {} deleted from your wishlist'.format(book.title), 'OK')
+        return redirect(url_for('bp_wishlist.do_wishlist'))
+
+    flash('Book: {} is not in your wishlist'.format(book.title), 'ERROR')
+    return redirect(url_for('bp_wishlist.do_wishlist'))
 
 
 

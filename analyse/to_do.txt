@@ -1,9 +1,11 @@
 wishlist:
 	- webpage:
-		- alle boeken in user zijn wishlist weergeven
+		- alle boeken in user zijn wishlist weergeven OK
 		- voorlopig geen pagination
 		- voorlopig geen sorteer
-		- boeken verwijderen van wishlist
+		- boeken verwijderen van wishlist OK
+	- methodes maken
+		- my_wishlist_books(user_id) -> Books
 user:
 	- wachtwoord aanpassen
 	- enkele user info aanpassen?

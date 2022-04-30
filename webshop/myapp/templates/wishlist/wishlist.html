@@ -1,23 +1,32 @@
 {% extends 'base.html' %}
 
 {% block main_content %}
+
 <div>
-    <div class="list-group">
+    <div class="list-group list-group-flush">
         {% for book in books %}
-        <a href="{{ url_for('bp_book.do_book', isbn=book.isbn) }}" class="list-group-item list-group-item-action">
-            <div class="d-flex align-items-stretch">
-                <img src="{{ book.cover }}" alt="{{book.title}}" style="width: 5%;">
-                <div class="mx-3">
-                    <h3>
-                        {{book.title}}
-                    </h3>
-                    <p>
-                        {{book.author}}
-                    </p>
+        <div class="list-group-item">
+
+            <a href="{{ url_for('bp_book.do_book', isbn=book.isbn) }}" class="list-group-item list-group-item-action border-0">
+                <div class="d-flex align-items-stretch">
+                    <img class="mx-3" src="{{ book.cover }}" alt="{{book.title}}" style="width: 5%;">
+                    <div class="mx-3">
+                        <h3>
+                            {{book.title}}
+                        </h3>
+                        <p>
+                            {{book.author}}
+                        </p>
+                    </div>
                 </div>
+            </a>
+            <div class="d-grid col-3 mx-auto">
+                <a class="btn btn-danger" href="{{url_for('bp_wishlist.delete_from_wishlist', isbn=book.isbn)}}" role="button">Remove</a>
             </div>
-        </a>
+        </div>
+
         {% endfor %}
     </div>
+
 </div>
 {% endblock %}
