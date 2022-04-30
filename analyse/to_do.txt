@@ -5,9 +5,11 @@ wishlist:
 		- voorlopig geen sorteer
 		- boeken verwijderen van wishlist OK
 	- methodes maken
-		- my_wishlist_books(user_id) -> Books
+		- my_wishlist_books(user_id) -> Books OK
+		- in de views_wishlist zitten nog een paar rare constructies
+			- maak methode hiervoor in Wishlist ofzo
 user:
-	- wachtwoord aanpassen
+	- wachtwoord aanpassen OK
 	- enkele user info aanpassen?
 	- profile
 		- amount wishlist books

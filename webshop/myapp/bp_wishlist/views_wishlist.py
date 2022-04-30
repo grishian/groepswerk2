@@ -8,14 +8,8 @@ from myapp.bp_book.model_book import Book
 
 @bp_wishlist.route('/wishlist')
 def do_wishlist():
-    my_wishlist_book_ids = []
-    my_wishlist_items = Wishlist.query.filter_by(user_id=current_user.id).all()
-    for wishlist_item in my_wishlist_items:
-        my_wishlist_book_ids.append(wishlist_item.book_id)
 
-    books = []
-    for book_id in my_wishlist_book_ids:
-        books.append(Book.query.get(book_id))
+    books = current_user.get_books_in_wishlist()
 
     return render_template('wishlist/wishlist.html', books=books)
 

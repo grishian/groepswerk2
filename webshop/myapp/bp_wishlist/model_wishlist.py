@@ -7,3 +7,6 @@ class Wishlist(db.Model):
     id = db.Column('F_ID', db.Integer, nullable=False, primary_key=True, index=True)
     user_id = db.Column('F_USER_ID', db.Integer, nullable=False)
     book_id = db.Column('F_BOOK_ID', db.String(13), nullable=False)
+
+
+
