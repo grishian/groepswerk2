@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eed24af7-6005-4dae-8463-7560dd151f38" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../analyse/to_do.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../analyse/to_do.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myapp/bp_user/model_user.py" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/bp_user/model_user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myapp/bp_wishlist/model_wishlist.py" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/bp_wishlist/model_wishlist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/bp_user/views_user.py" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/bp_user/views_user.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myapp/bp_wishlist/views_wishlist.py" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/bp_wishlist/views_wishlist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/templates/wishlist/wishlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/templates/wishlist/wishlist.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +119,11 @@
       <workItem from="1651130382887" duration="12144000" />
       <workItem from="1651146675119" duration="13071000" />
       <workItem from="1651303313079" duration="9433000" />
-      <workItem from="1651312849171" duration="2592000" />
+      <workItem from="1651312849171" duration="3006000" />
+      <workItem from="1651332382947" duration="2312000" />
+      <workItem from="1651475286027" duration="24000" />
+      <workItem from="1651497523247" duration="2060000" />
+      <workItem from="1651683095549" duration="51000" />
     </task>
     <servers />
   </component>

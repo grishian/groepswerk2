@@ -7,7 +7,8 @@
         {% for book in books %}
         <div class="list-group-item">
 
-            <a href="{{ url_for('bp_book.do_book', isbn=book.isbn) }}" class="list-group-item list-group-item-action border-0">
+            <a href="{{ url_for('bp_book.do_book', isbn=book.isbn) }}"
+               class="list-group-item list-group-item-action border-0">
                 <div class="d-flex align-items-stretch">
                     <img class="mx-3" src="{{ book.cover }}" alt="{{book.title}}" style="width: 5%;">
                     <div class="mx-3">
@@ -21,7 +22,8 @@
                 </div>
             </a>
             <div class="d-grid col-3 mx-auto">
-                <a class="btn btn-danger" href="{{url_for('bp_wishlist.delete_from_wishlist', isbn=book.isbn)}}" role="button">Remove</a>
+                <a class="btn btn-danger" href="{{url_for('bp_wishlist.delete_from_wishlist', isbn=book.isbn)}}"
+                   role="button">Remove</a>
             </div>
         </div>
 

@@ -7,6 +7,7 @@ from myapp.bp_book.model_book import Book
 
 
 @bp_wishlist.route('/wishlist')
+@login_required
 def do_wishlist():
 
     books = current_user.get_books_in_wishlist()

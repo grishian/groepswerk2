@@ -44,7 +44,6 @@ def do_login():
 
                 flash('You are now logged in', 'OK')
 
-
                 return redirect(url_for('bp_general.do_home'))
         else:
             flash('Wrong email or password', 'WARNING')
