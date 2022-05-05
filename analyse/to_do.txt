@@ -1,15 +1,13 @@
 wishlist:
 	- webpage:
-		- alle boeken in user zijn wishlist weergeven OK
 		- voorlopig geen pagination
 		- voorlopig geen sorteer
-		- boeken verwijderen van wishlist OK
+
 	- methodes maken
-		- my_wishlist_books(user_id) -> Books OK
 		- in de views_wishlist zitten nog een paar rare constructies
 			- maak methode hiervoor in Wishlist ofzo
 user:
-	- wachtwoord aanpassen OK
+
 	- enkele user info aanpassen?
 	- profile
 		- amount wishlist books
@@ -17,15 +15,38 @@ user:
 	- blijkbaar zit in de login_view (user_id=id) dit is overbodig
 
 home:
-	- filters maken
+	- filters maken (ook bij wishlist) belangrijk: grishian
+		- zoekbalk
+		- alphabetische volgorde(titel en auteur(achternaam))
+		- type boek
 
 unittests:
 	- flask-unittest?
 	- opzoeken hoe dit moet
 
+admin:
+	- add_book: belangrijk: hande
+		- waar kan een dropdown menu van maken
+	- zet dit op de profile page: hande
+		- boeken toevoegen ( op de admin profile page)
+			- verwijderen
+			- aanpassen
+	- bij de add_book pagina: hande
+		- dropdownmenu als je size aanduidt
+			- automatisch pagina/minuten/Mb achter het getal zetten
+				- bijv: 200 Mb
+				- bijv: 300 pagina's
+				- bijv: 236 minuten
+	
 
 
 extra:
+	- nu staan de boeken in het nederlands
+		- zoek meer engelse boeken
+
+	- op Bookz page:
+		- pagination toevoegen( per 5 boeken ofzo)
+		- boven de boeken een introductie toevoegen ivm hoe je boeken moet toevoegen enzo
 	- vraag:
 		- wordt er met filter enkel: sorteer bedoelt?
 			- of ook search?
