@@ -1,22 +1,30 @@
 from myapp.bp_general import bp_general
 from myapp.bp_book.model_book import Book
-from flask import render_template, url_for, flash, redirect
+from flask import render_template, url_for, flash, redirect, request
+from flask_login import current_user
 
 
-
-@bp_general.route('/')
-@bp_general.route('/index')
+@bp_general.route('/', methods=['GET', 'POST'])
+@bp_general.route('/index', methods=['GET', 'POST'])
 def do_home():
-    books = Book.query.all()
 
-    return render_template('general/home.html', books=books)
+    page = request.args.get('page', 1, type=int)
+    books = Book.query.paginate(page, 3, False)
+    next_url = url_for('bp_general.do_home', page=books.next_num) \
+        if books.has_next else None
+    prev_url = url_for('bp_general.do_home', page=books.prev_num) \
+        if books.has_prev else None
+
+    return render_template('general/home.html', books=books.items, next_url=next_url, prev_url=prev_url)
 
 
 @bp_general.route('/filter/<filter_by>')
 def do_filter(filter_by):
 
+    page = request.args.get('page', 1, type=int)
+
     if filter_by == 'alphabetic':
-        books = Book.query.order_by(Book.title).all()
+        books = Book.query.order_by(Book.title).paginate(page, 3, False)
     if filter_by == 'price_desc':
         books = Book.query.order_by(Book.price.desc()).all()
     if filter_by == 'price_asc':
@@ -36,8 +44,13 @@ def do_filter(filter_by):
     if filter_by == 'audio-book':
         books = Book.query.filter_by(type='audio-book').all()
 
+    next_url = url_for('bp_general.do_home', page=books.next_num) \
+        if books.has_next else None
+    prev_url = url_for('bp_general.do_home', page=books.prev_num) \
+        if books.has_prev else None
 
-    return render_template('general/home.html', books=books)
+
+    return render_template('general/home.html', books=books.items, next_url=next_url, prev_url=prev_url)
 
 
 def do_not_found(error):
