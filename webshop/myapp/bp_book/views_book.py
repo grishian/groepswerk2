@@ -43,3 +43,17 @@ def add_book():
 
     return render_template('book/add_book.html', form=form)
 
+
+@bp_book.route('/delete_book/<isbn>', methods=["GET", "POST"])
+@only_admins
+def delete_book(isbn):
+
+    #book = Book.query.filter_by(isbn=isbn).first_or_404()
+
+    Book.query.filter_by(isbn=isbn).delete()
+
+    db.session.commit()
+
+    flash('Book succesfully deleted', 'OK')
+    return redirect(url_for('bp_general.do_home'))
+
