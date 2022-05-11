@@ -2,6 +2,10 @@
 
 {% block main_content %}
 
+<!-- slim select script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.27.1/slimselect.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.27.1/slimselect.min.css" rel="stylesheet"></link>
+
 
 <ul class="nav mb-1">
     <li class="nav-item dropdown">
@@ -41,6 +45,15 @@
                    href="{{url_for('bp_general.do_filter', filter_by='audio-book')}}">Audio-book</a></li>
         </ul>
     </li>
+    <li class="nav-item dropdown" style="width: 20%;">
+        <select id="multiple" multiple>
+            {% for book in books %}
+                <option value="{{ book }}">{{ book.title }}</option>
+            {% endfor %}
+        </select>
+    </li>
+
+
 </ul>
 
 
@@ -68,5 +81,10 @@
 </div>
 
 <!-- slim select script -->
+<script>
+    new SlimSelect({
+        select: '#multiple'
+    })
+</script>
 
 {% endblock %}
