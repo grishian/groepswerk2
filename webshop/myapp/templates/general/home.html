@@ -2,15 +2,18 @@
 
 {% block main_content %}
 
-<ul class="nav nav-tabs">
+<ul class="nav mb-1">
     <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
             Order by
         </a>
         <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Alphabetic</a></li>
-            <li><a class="dropdown-item" href="#">Price high to low</a></li>
-            <li><a class="dropdown-item" href="#">Price low to high</a></li>
+            <li><a class="dropdown-item"
+                   href="{{url_for('bp_general.do_filter', filter_by='alphabetic')}}">Alphabetic</a></li>
+            <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='price_desc')}}">Price high
+                to low</a></li>
+            <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='price_asc')}}">Price low to
+                high</a></li>
         </ul>
     </li>
     <li class="nav-item dropdown">
@@ -18,9 +21,9 @@
             Filter by genre
         </a>
         <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Fiction</a></li>
-            <li><a class="dropdown-item" href="#">Non-Fiction</a></li>
-            <li><a class="dropdown-item" href="#">Horror</a></li>
+            <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='fiction')}}">Fiction</a></li>
+            <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='non-fiction')}}">Non-Fiction</a></li>
+            <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='horror')}}">Horror</a></li>
         </ul>
     </li>
     <li class="nav-item dropdown">
@@ -28,9 +31,9 @@
             Filter by type
         </a>
         <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Fysical</a></li>
-            <li><a class="dropdown-item" href="#">E-book</a></li>
-            <li><a class="dropdown-item" href="#">Audio-book</a></li>
+            <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='fysical')}}">Fysical</a></li>
+            <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='e-book')}}">E-book</a></li>
+            <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='audio-book')}}">Audio-book</a></li>
         </ul>
     </li>
     <form class="d-flex">
@@ -45,13 +48,16 @@
         {% for book in books %}
         <a href="{{ url_for('bp_book.do_book', isbn=book.isbn) }}" class="list-group-item list-group-item-action">
             <div class="d-flex align-items-stretch">
-                <img src="{{ book.cover }}" alt="{{book.title}}" style="width: 5%;">
+                <img src="{{ book.cover }}" alt="{{book.title}}" style="width: 7%;">
                 <div class="mx-3">
                     <h3>
                         {{book.title}}
                     </h3>
                     <p>
                         {{book.author}}
+                    </p>
+                    <p>
+                        &euro;{{book.price}}
                     </p>
                 </div>
             </div>
