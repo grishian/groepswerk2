@@ -30,8 +30,7 @@ def add_book():
         book.price = form.price.data
         book.language = form.language.data
         book.series = form.series.data
-        book.size = form.size.data
-        book.size_type = form.size_type.data
+        book.size = form.size.data + ' ' + form.size_type.data
         book.synopsis = form.synopsis.data
         book.cover = form.cover.data
 
