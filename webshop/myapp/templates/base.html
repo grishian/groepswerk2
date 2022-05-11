@@ -31,6 +31,14 @@
                        href="{{url}}">Bookz
                     </a>
                 </li>
+                {% if current_user.is_author %}
+                <li class="nav-item">
+                    {% set url = url_for('bp_book.add_book') %}
+                    <a class="nav-link{% if request.path == url %} active{% endif %}" aria-current="page"
+                       href="{{url}}">Add Book
+                    </a>
+                </li>
+                {% endif %}
                 {% if current_user and current_user.is_authenticated %}
                 <li class="nav-item">
                     {% set url = url_for('bp_user.do_user') %}
