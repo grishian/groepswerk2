@@ -14,7 +14,7 @@
       <ul class="list-group list-group-flush">
         <li class="list-group-item"><p class="card-text">{{current_user.email}}</p></li>
         <li class="list-group-item"><p class="card-text">Registerd on **/**/****</p></li>
-        <li class="list-group-item"><p class="card-text">...amount of books in wishlist...</p></li>
+        <li class="list-group-item"><p class="card-text">Books in wishlist: {{ count_wishlist_books }}</p></li>
         {% if current_user.is_author %}
         <li class="list-group-item"><p class="card-text" style="color: red;">Is an admin.</p></li>
         {% endif %}

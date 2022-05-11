@@ -4,12 +4,14 @@ from flask_login import login_required, current_user, login_user, logout_user
 from myapp import db
 from myapp.bp_user import bp_user
 from myapp.bp_user.model_user import User, only_admins
+from myapp.bp_wishlist.model_wishlist import Wishlist
 from myapp.bp_user.form_user import LoginForm, SignUpForm, ChangePasswordForm
 
 
 @bp_user.route('/user')
 def do_user():
-    return render_template('user/user.html')
+    count_wishlist_books = Wishlist.query.filter_by(user_id=current_user.id).count()
+    return render_template('user/user.html', count_wishlist_books=count_wishlist_books)
 
 
 
