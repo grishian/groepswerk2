@@ -2,6 +2,24 @@ from myapp.bp_general import bp_general
 from myapp.bp_book.model_book import Book
 from flask import render_template, url_for
 
+'''
+@bp_general.route('/<filter>', methods=["GET"])
+@bp_general.route('/index/filter', methods=["GET"])
+def do_home(filter):
+
+    if filter == '':
+        pass
+    if filter == '':
+        pass
+    if filter == '':
+        pass
+    if filter == '':
+        pass
+
+    books = Book.query.all()
+
+    return render_template('general/home.html', books=books)
+    '''
 
 
 @bp_general.route('/')

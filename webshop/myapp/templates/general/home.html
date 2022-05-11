@@ -2,6 +2,44 @@
 
 {% block main_content %}
 
+<ul class="nav nav-tabs">
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+            Order by
+        </a>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Alphabetic</a></li>
+            <li><a class="dropdown-item" href="#">Price high to low</a></li>
+            <li><a class="dropdown-item" href="#">Price low to high</a></li>
+        </ul>
+    </li>
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+            Filter by genre
+        </a>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Fiction</a></li>
+            <li><a class="dropdown-item" href="#">Non-Fiction</a></li>
+            <li><a class="dropdown-item" href="#">Horror</a></li>
+        </ul>
+    </li>
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+            Filter by type
+        </a>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Fysical</a></li>
+            <li><a class="dropdown-item" href="#">E-book</a></li>
+            <li><a class="dropdown-item" href="#">Audio-book</a></li>
+        </ul>
+    </li>
+    <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search books..." aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+</ul>
+
+
 <div>
     <div class="list-group">
         {% for book in books %}
