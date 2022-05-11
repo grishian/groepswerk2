@@ -2,6 +2,7 @@
 
 {% block main_content %}
 
+
 <ul class="nav mb-1">
     <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
@@ -21,8 +22,10 @@
             Filter by genre
         </a>
         <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='fiction')}}">Fiction</a></li>
-            <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='non-fiction')}}">Non-Fiction</a></li>
+            <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='fiction')}}">Fiction</a>
+            </li>
+            <li><a class="dropdown-item"
+                   href="{{url_for('bp_general.do_filter', filter_by='non-fiction')}}">Non-Fiction</a></li>
             <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='horror')}}">Horror</a></li>
         </ul>
     </li>
@@ -31,15 +34,13 @@
             Filter by type
         </a>
         <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='fysical')}}">Fysical</a></li>
+            <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='fysical')}}">Fysical</a>
+            </li>
             <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='e-book')}}">E-book</a></li>
-            <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='audio-book')}}">Audio-book</a></li>
+            <li><a class="dropdown-item"
+                   href="{{url_for('bp_general.do_filter', filter_by='audio-book')}}">Audio-book</a></li>
         </ul>
     </li>
-    <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search books..." aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-    </form>
 </ul>
 
 
@@ -65,4 +66,7 @@
         {% endfor %}
     </div>
 </div>
+
+<!-- slim select script -->
+
 {% endblock %}
