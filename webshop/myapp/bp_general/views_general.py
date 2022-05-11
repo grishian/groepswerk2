@@ -26,23 +26,23 @@ def do_filter(filter_by):
     if filter_by == 'alphabetic':
         books = Book.query.order_by(Book.title).paginate(page, 3, False)
     if filter_by == 'price_desc':
-        books = Book.query.order_by(Book.price.desc()).all()
+        books = Book.query.order_by(Book.price.desc()).paginate(page, 3, False)
     if filter_by == 'price_asc':
-        books = Book.query.order_by(Book.price.asc()).all()
+        books = Book.query.order_by(Book.price.asc()).paginate(page, 3, False)
 
     if filter_by == 'fiction':
-        books = Book.query.filter_by(genre='fiction').all()
+        books = Book.query.filter_by(genre='fiction').paginate(page, 3, False)
     if filter_by == 'non-fiction':
-        books = Book.query.filter_by(genre='non-fiction').all()
+        books = Book.query.filter_by(genre='non-fiction').paginate(page, 3, False)
     if filter_by == 'horror':
-        books = Book.query.filter_by(genre='horror').all()
+        books = Book.query.filter_by(genre='horror').paginate(page, 3, False)
 
     if filter_by == 'fysical':
-        books = Book.query.filter_by(type='fysical').all()
+        books = Book.query.filter_by(type='fysical').paginate(page, 3, False)
     if filter_by == 'e-book':
-        books = Book.query.filter_by(type='e-book').all()
+        books = Book.query.filter_by(type='e-book').paginate(page, 3, False)
     if filter_by == 'audio-book':
-        books = Book.query.filter_by(type='audio-book').all()
+        books = Book.query.filter_by(type='audio-book').paginate(page, 3, False)
 
     next_url = url_for('bp_general.do_home', page=books.next_num) \
         if books.has_next else None
