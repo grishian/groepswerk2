@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField, TextAreaField, SelectField
+from wtforms import StringField, SubmitField, TextAreaField, SelectField, HiddenField
 
 
 class BookForm(FlaskForm):
@@ -36,6 +36,6 @@ class BookForm(FlaskForm):
                                          ('Mb', 'Mb')])
     synopsis = TextAreaField('Synopsis', id='book_synopsis')
     cover = StringField('Cover url', id='book_cover')
-    submit = SubmitField('Add book', id='book_add')
+    submit = SubmitField('Submit', id='book_add')
 
 
