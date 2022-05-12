@@ -8,6 +8,7 @@ from flask_login import current_user
 @bp_general.route('/index', methods=['GET', 'POST'])
 def do_home():
 
+    all_books = Book.query.all()
     page = request.args.get('page', 1, type=int)
     books = Book.query.paginate(page, 3, False)
     next_url = url_for('bp_general.do_home', page=books.next_num) \
@@ -15,12 +16,12 @@ def do_home():
     prev_url = url_for('bp_general.do_home', page=books.prev_num) \
         if books.has_prev else None
 
-    return render_template('general/home.html', books=books.items, next_url=next_url, prev_url=prev_url)
+    return render_template('general/home.html', books=books.items, next_url=next_url, prev_url=prev_url, all_books=all_books)
 
 
 @bp_general.route('/filter/<filter_by>')
 def do_filter(filter_by):
-
+    all_books = Book.query.all()
     page = request.args.get('page', 1, type=int)
 
     if filter_by == 'alphabetic':
@@ -50,7 +51,7 @@ def do_filter(filter_by):
         if books.has_prev else None
 
 
-    return render_template('general/home.html', books=books.items, next_url=next_url, prev_url=prev_url)
+    return render_template('general/home.html', books=books.items, next_url=next_url, prev_url=prev_url, all_books=all_books)
 
 
 def do_not_found(error):
