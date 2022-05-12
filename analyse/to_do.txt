@@ -17,6 +17,8 @@ user:
 home:
 	- filters maken (ook bij wishlist) belangrijk: grishian
 		- zoekbalk
+			- voeg in de view een variabele: allbooks toe
+				- deze is dan Book.query.all()
 		- alphabetische volgorde(titel en auteur(achternaam))
 		- type boek
 
