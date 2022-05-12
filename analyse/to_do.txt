@@ -1,5 +1,5 @@
 wishlist:
-	- webpage:
+	- webpage: OK
 		- voorlopig geen pagination
 		- voorlopig geen sorteer
 
@@ -9,21 +9,23 @@ wishlist:
 user:
 
 	- enkele user info aanpassen?
-	- profile
+	- profile: OK
 		- amount wishlist books
 			- methode maken in Wishlist hiervoor
 	- blijkbaar zit in de login_view (user_id=id) dit is overbodig
 
 home:
 	- filters maken (ook bij wishlist) belangrijk: grishian
-		- zoekbalk
+		- zoekbalk: IN BEHANDELING
 			- voeg in de view een variabele: allbooks toe
 				- deze is dan Book.query.all()
-		- alphabetische volgorde(titel en auteur(achternaam))
-		- type boek
+		- alphabetische volgorde(titel en auteur(achternaam)) OK
+		- type boek OK 
+		- genre filter uitbreiden met meer genres. IN BEHANDELING
 
-unittests: BELANGRIJK
-	- flask-unittest?
+
+unittests: BELANGRIJK: BEKIJK TUTORIAL: Grishian, hande
+	- flask-unittest?: pytest
 	- opzoeken hoe dit moet
 
 admin:
@@ -43,6 +45,12 @@ admin:
 
 
 extra:
+	- op de hoofdpagina extra info.
+
+	- bij de boeken die weergegeven worden op de homepage
+		- genre toevoegen
+		- type toevoegen
+
 	- nu staan de boeken in het nederlands
 		- zoek meer engelse boeken
 

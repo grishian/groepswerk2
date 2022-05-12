@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eed24af7-6005-4dae-8463-7560dd151f38" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myapp/bp_book/cli_book.py" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/bp_book/cli_book.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myapp/bp_book/views_book.py" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/bp_book/views_book.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myapp/templates/book/change_book.html" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/templates/book/change_book.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../analyse/to_do.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../analyse/to_do.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +125,7 @@
       <workItem from="1652257348689" duration="7585000" />
       <workItem from="1652267991434" duration="8383000" />
       <workItem from="1652293720345" duration="5772000" />
-      <workItem from="1652340461284" duration="2107000" />
+      <workItem from="1652340461284" duration="2550000" />
     </task>
     <servers />
   </component>
