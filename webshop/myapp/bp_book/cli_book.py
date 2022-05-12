@@ -32,3 +32,4 @@ def do_create_book(type, title, author, isbn, genre, price, language, series, si
     book.cover = cover
     db.session.add(book)
     db.session.commit()
+

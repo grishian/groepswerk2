@@ -22,7 +22,7 @@ home:
 		- alphabetische volgorde(titel en auteur(achternaam))
 		- type boek
 
-unittests:
+unittests: BELANGRIJK
 	- flask-unittest?
 	- opzoeken hoe dit moet
 

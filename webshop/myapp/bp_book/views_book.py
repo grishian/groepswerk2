@@ -83,4 +83,4 @@ def change_book(isbn):
 
         return redirect(url_for('bp_general.do_home'))
 
-    return render_template('book/change_book.html', form=form)
+    return render_template('book/change_book.html', form=form, book=book)

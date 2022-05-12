@@ -2,7 +2,7 @@
 
 {% block main_content %}
 <div class="page-header">
-    <h1>Change Book</h1>
+    <h1>Change Book: {{ book.title }}</h1>
 </div>
 <div style="width:60%;">
     <form method="post" name="form-change_book">
@@ -14,27 +14,27 @@
         </div>
         <div class="row">
             <div class="col">
-                {{ form.title.label(class_="form-control-label") }} {{ form.title(placeholder="Can not be empty!", class_="form-control") }}<br>
+                {{ form.title.label(class_="form-control-label") }} {{ form.title(placeholder="Can not be empty!", class_="form-control", value= book.title ) }}<br>
             </div>
         </div>
         <div class="row">
             <div class="col">
-                {{ form.author.label(class_="form-control-label") }} {{ form.author(placeholder="Can not be empty!", class_="form-control") }}<br>
+                {{ form.author.label(class_="form-control-label") }} {{ form.author(placeholder="Can not be empty!", class_="form-control", value= book.author) }}<br>
             </div>
         </div>
         <div class="row">
             <div class="col">
-                {{ form.isbn.label(class_="form-control-label") }} {{ form.isbn(placeholder="Can not be empty!", class_="form-control") }}<br>
+                {{ form.isbn.label(class_="form-control-label") }} {{ form.isbn(placeholder="Can not be empty!", class_="form-control", value= book.isbn) }}<br>
             </div>
         </div>
         <div class="row">
             <div class="col">
-                {{ form.genre.label(class_="form-control-label") }} {{ form.genre(placeholder="Can not be empty!", class_="form-control") }}<br>
+                {{ form.genre.label(class_="form-control-label") }} {{ form.genre(placeholder="Can not be empty!", class_="form-control", value= book.genre) }}<br>
             </div>
         </div>
         <div class="row">
             <div class="col">
-                {{ form.price.label(class_="form-control-label") }} {{ form.price(placeholder="Can not be empty!", class_="form-control") }}<br>
+                {{ form.price.label(class_="form-control-label") }} {{ form.price(placeholder="Can not be empty!", class_="form-control", value= book.price ) }}<br>
             </div>
         </div>
         <div class="row">
