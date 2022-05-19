@@ -10,7 +10,6 @@ from myapp.bp_book.model_book import Book
 
 
 class User(db.Model, UserMixin):
-
     __tablename__ = 'user'
     id = db.Column('id', db.Integer, primary_key=True, index=True)
     email = db.Column('email', db.String(200), unique=True)
@@ -18,6 +17,7 @@ class User(db.Model, UserMixin):
     __password = db.Column('password', db.String(255))
     active = db.Column('active', db.Boolean)
     profile_type = db.Column('profile', db.Integer, default=1)
+
     # 0 - author
     # 1 - user
 
@@ -75,6 +75,5 @@ def only_admins(func):
             return func(*args, **kwargs)
         else:
             abort(403)
+
     return is_allowed
-
-
