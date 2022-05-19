@@ -1,6 +1,5 @@
-from myapp.bp_user.model_user import User
-
 def test_new_user():
+    from myapp.bp_user.model_user import User
     '''
     GIVEN a user model
     WHEN a new user is created
@@ -15,6 +14,3 @@ def test_new_user():
     assert user.check_password('test')
     assert user.is_active() == True
     assert user.is_author == False
-
-
-
