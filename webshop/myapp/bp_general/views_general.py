@@ -25,7 +25,9 @@ def do_home():
         for isbn in items:
             books.append(Book.query.filter_by(isbn=isbn).first())
 
-
+        if items is None:
+            return redirect('/')
+        #when empty : method not allowed
     return render_template('general/home.html', books=books, next_url=next_url, prev_url=prev_url,
                            all_books=all_books)
 
@@ -37,7 +39,7 @@ def do_test(items):
     return render_template('test.html', items=items)
 
 
-@bp_general.route('/filter/<filter_by>')
+@bp_general.route('/filter/<filter_by>', methods=['POST', 'GET'])
 def do_filter(filter_by):
     all_books = Book.query.all()
     page = request.args.get('page', 1, type=int)
