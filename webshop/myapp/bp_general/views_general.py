@@ -16,7 +16,22 @@ def do_home():
     prev_url = url_for('bp_general.do_home', page=books.prev_num) \
         if books.has_prev else None
 
+    if request.method == 'POST':
+
+        searched_books = request.form.getlist('slim_select')
+        return redirect(url_for('bp_general.do_filter', searched_books=searched_books))
+
+
     return render_template('general/home.html', books=books.items, next_url=next_url, prev_url=prev_url, all_books=all_books)
+
+
+@bp_general.route('/search/<searched_books>')
+def do_search(searched_books):
+    searched_books=searched_books
+
+    #searched books is list of book titles...
+    #make a list of books
+
 
 
 @bp_general.route('/filter/<filter_by>')

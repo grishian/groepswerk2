@@ -5,6 +5,7 @@ def test_new_user():
     WHEN a new user is created
     THEN check if fields are defined correctly
     '''
+
     user = User()
     user.email = 'test@hotmail.com'
     user.username = 'test_user'
