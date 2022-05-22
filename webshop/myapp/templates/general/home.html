@@ -49,9 +49,9 @@
         <form action="" method="post" name="form-login">
 
             <div class="d-flex flex-row bd-highlight mb-3">
-                <select class="p-2 bd-highlight" id="multiple" multiple>
+                <select class="p-2 bd-highlight" id="multiple" name="slim_select" multiple>
                     {% for book in all_books %}
-                    <option value="{{ book }}">{{ book.title }}</option>
+                    <option value="{{ book.isbn }}">{{ book.title }}</option>
                     {% endfor %}
                 </select>
                 <button type="submit" class="btn btn-primary p-2 bd-highlight">Submit</button>

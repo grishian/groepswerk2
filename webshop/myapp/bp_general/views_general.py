@@ -7,7 +7,6 @@ from flask_login import current_user
 @bp_general.route('/', methods=['GET', 'POST'])
 @bp_general.route('/index', methods=['GET', 'POST'])
 def do_home():
-
     all_books = Book.query.all()
     page = request.args.get('page', 1, type=int)
     books = Book.query.paginate(page, 3, False)
@@ -15,23 +14,27 @@ def do_home():
         if books.has_next else None
     prev_url = url_for('bp_general.do_home', page=books.prev_num) \
         if books.has_prev else None
+    books = books.items
 
     if request.method == 'POST':
 
-        searched_books = request.form.getlist('slim_select')
-        return redirect(url_for('bp_general.do_filter', searched_books=searched_books))
+        items = request.form.getlist('slim_select')
+
+        books = []
+
+        for isbn in items:
+            books.append(Book.query.filter_by(isbn=isbn).first())
 
 
-    return render_template('general/home.html', books=books.items, next_url=next_url, prev_url=prev_url, all_books=all_books)
+    return render_template('general/home.html', books=books, next_url=next_url, prev_url=prev_url,
+                           all_books=all_books)
 
 
-@bp_general.route('/search/<searched_books>')
-def do_search(searched_books):
-    searched_books=searched_books
+@bp_general.route('/test/<items>')
+def do_test(items):
+    items = items
 
-    #searched books is list of book titles...
-    #make a list of books
-
+    return render_template('test.html', items=items)
 
 
 @bp_general.route('/filter/<filter_by>')
@@ -65,8 +68,8 @@ def do_filter(filter_by):
     prev_url = url_for('bp_general.do_home', page=books.prev_num) \
         if books.has_prev else None
 
-
-    return render_template('general/home.html', books=books.items, next_url=next_url, prev_url=prev_url, all_books=all_books)
+    return render_template('general/home.html', books=books.items, next_url=next_url, prev_url=prev_url,
+                           all_books=all_books)
 
 
 def do_not_found(error):

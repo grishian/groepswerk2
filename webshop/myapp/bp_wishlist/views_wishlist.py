@@ -23,7 +23,7 @@ def add_to_wishlist(isbn):
     user_id = current_user.id
     my_wishlist_book_ids = []
     my_wishlist_items = Wishlist.query.filter_by(user_id=user_id).all()
-    
+
     for wishlist_item in my_wishlist_items:
         my_wishlist_book_ids.append(wishlist_item.book_id)
 
