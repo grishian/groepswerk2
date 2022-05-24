@@ -18,8 +18,8 @@ class User(db.Model, UserMixin):
     active = db.Column('active', db.Boolean)
     profile_type = db.Column('profile', db.Integer, default=1)
 
-    # 0 - author
-    # 1 - user
+    # 0 - Administrator
+    # 1 - User
 
     def get_books_in_wishlist(self):
 
