@@ -1,5 +1,5 @@
 home:
-	- zoekbalk: IN BEHANDELING: Grishian
+	- zoekbalk: IN BEHANDELING: Grishian: OK
 		- voeg in de view een variabele: allbooks toe
 			- deze is dan Book.query.all()
 	- genre filter uitbreiden met meer genres. IN BEHANDELING: Hande

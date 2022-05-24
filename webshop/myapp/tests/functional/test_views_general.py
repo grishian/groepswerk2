@@ -38,11 +38,29 @@ def test_do_filter_genre():
     flask_app = create_app('flask_test.cfg')
 
     with flask_app.test_client() as test_client:
-        response = test_client.get('/filter/fiction')
+        response = test_client.get('/filter/Science Fiction (Sci-Fi)')
         assert response.status_code == 200
-        response = test_client.get('/filter/non-fiction')
+        response = test_client.get('/filter/Romance')
         assert response.status_code == 200
-        response = test_client.get('/filter/horror')
+        response = test_client.get('/filter/Poetry')
+        assert response.status_code == 200
+        response = test_client.get('/filter/Non-fiction')
+        assert response.status_code == 200
+        response = test_client.get('/filter/Informative')
+        assert response.status_code == 200
+        response = test_client.get('/filter/Horror')
+        assert response.status_code == 200
+        response = test_client.get('/filter/History')
+        assert response.status_code == 200
+        response = test_client.get('/filter/Fantasy')
+        assert response.status_code == 200
+        response = test_client.get('/filter/Detective')
+        assert response.status_code == 200
+        response = test_client.get('/filter/Comic')
+        assert response.status_code == 200
+        response = test_client.get('/filter/Adventure')
+        assert response.status_code == 200
+        response = test_client.get('/filter/Action')
         assert response.status_code == 200
 
 def test_do_filter_type():
@@ -54,11 +72,11 @@ def test_do_filter_type():
     flask_app = create_app('flask_test.cfg')
 
     with flask_app.test_client() as test_client:
-        response = test_client.get('/filter/fysical')
+        response = test_client.get('/filter/Physical book')
         assert response.status_code == 200
-        response = test_client.get('/filter/e-book')
+        response = test_client.get('/filter/E-book')
         assert response.status_code == 200
-        response = test_client.get('/filter/audio-book')
+        response = test_client.get('/filter/Audiobook')
         assert response.status_code == 200
 
 
