@@ -51,12 +51,32 @@ def do_filter(filter_by):
     if filter_by == 'price_asc':
         books = Book.query.order_by(Book.price.asc()).paginate(page, 3, False)
 
-    if filter_by == 'fiction':
-        books = Book.query.filter_by(genre='fiction').paginate(page, 3, False)
-    if filter_by == 'non-fiction':
-        books = Book.query.filter_by(genre='non-fiction').paginate(page, 3, False)
-    if filter_by == 'horror':
-        books = Book.query.filter_by(genre='horror').paginate(page, 3, False)
+    if filter_by == 'Action':
+        books = Book.query.filter_by(genre='Action').paginate(page, 3, False)
+    if filter_by == 'Adventure':
+        books = Book.query.filter_by(genre='Adventure').paginate(page, 3, False)
+    if filter_by == 'Comic':
+        books = Book.query.filter_by(genre='Comic').paginate(page, 3, False)
+    if filter_by == 'Detective':
+        books = Book.query.filter_by(genre='Detective').paginate(page, 3, False)
+    if filter_by == 'Fantasy':
+        books = Book.query.filter_by(genre='Fantasy').paginate(page, 3, False)
+    if filter_by == 'History':
+        books = Book.query.filter_by(genre='History').paginate(page, 3, False)
+    if filter_by == 'Horror':
+        books = Book.query.filter_by(genre='Horror').paginate(page, 3, False)
+    if filter_by == 'Informative':
+        books = Book.query.filter_by(genre='Informative').paginate(page, 3, False)
+    if filter_by == 'Non-fiction':
+        books = Book.query.filter_by(genre='Non-fiction').paginate(page, 3, False)
+    if filter_by == 'Poetry':
+        books = Book.query.filter_by(genre='Poetry').paginate(page, 3, False)
+    if filter_by == 'Romance':
+        books = Book.query.filter_by(genre='Romance').paginate(page, 3, False)
+    if filter_by == 'Science Fiction (Sci-Fi)':
+        books = Book.query.filter_by(genre='Science Fiction (Sci-Fi)').paginate(page, 3, False)
+    if filter_by == 'Thriller':
+        books = Book.query.filter_by(genre='Thriller').paginate(page, 3, False)
 
     if filter_by == 'Physical book':
         books = Book.query.filter_by(type='Physical book').paginate(page, 3, False)

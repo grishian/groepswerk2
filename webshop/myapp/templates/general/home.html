@@ -26,11 +26,19 @@
             Filter by genre
         </a>
         <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='fiction')}}">Fiction</a>
-            </li>
-            <li><a class="dropdown-item"
-                   href="{{url_for('bp_general.do_filter', filter_by='non-fiction')}}">Non-Fiction</a></li>
-            <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='horror')}}">Horror</a></li>
+            <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='Action')}}">Action</a></li>
+            <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='Adventure')}}">Adventure</a></li>
+            <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='Comic')}}">Comic</a></li>
+            <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='Detective')}}">Detective</a></li>
+            <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='Fantasy')}}">Fantasy</a></li>
+            <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='History')}}">History</a></li>
+            <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='Horror')}}">Horror</a></li>
+            <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='Informative')}}">Informative</a></li>
+            <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='Non-fiction')}}">Non-fiction</a></li>
+            <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='Poetry')}}">Poetry</a></li>
+            <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='Romance')}}">Romance</a></li>
+            <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='Science Fiction (Sci-Fi)')}}">Science Fiction (Sci-Fi)</a></li>
+            <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='Thriller')}}">Thriller</a></li>
         </ul>
     </li>
     <li class="nav-item dropdown">
@@ -41,8 +49,7 @@
             <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='Physical book')}}">Physical book</a>
             </li>
             <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='E-book')}}">E-book</a></li>
-            <li><a class="dropdown-item"
-                   href="{{url_for('bp_general.do_filter', filter_by='Audiobook')}}">Audiobook</a></li>
+            <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='Audiobook')}}">Audiobook</a></li>
         </ul>
     </li>
     <li class="nav-item dropdown" style="width: 30%;">
