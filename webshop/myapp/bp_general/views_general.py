@@ -58,12 +58,12 @@ def do_filter(filter_by):
     if filter_by == 'horror':
         books = Book.query.filter_by(genre='horror').paginate(page, 3, False)
 
-    if filter_by == 'fysical':
-        books = Book.query.filter_by(type='fysical').paginate(page, 3, False)
-    if filter_by == 'e-book':
-        books = Book.query.filter_by(type='e-book').paginate(page, 3, False)
-    if filter_by == 'audio-book':
-        books = Book.query.filter_by(type='audio-book').paginate(page, 3, False)
+    if filter_by == 'Physical book':
+        books = Book.query.filter_by(type='Physical book').paginate(page, 3, False)
+    if filter_by == 'E-book':
+        books = Book.query.filter_by(type='E-book').paginate(page, 3, False)
+    if filter_by == 'Audiobook':
+        books = Book.query.filter_by(type='Audiobook').paginate(page, 3, False)
 
     next_url = url_for('bp_general.do_home', page=books.next_num) \
         if books.has_next else None
