@@ -29,7 +29,7 @@ class BookForm(FlaskForm):
     language = StringField('Language', id='book_language')
     series = StringField('Series', id='book_series')
     size = StringField('Size', id='book_size')
-    size_type = SelectField('Size type', choices=[(0, 'Please select a size type'),
+    size_type = SelectField('Size type', choices=[('', 'Please select a size type'),
                                          ('Pages', 'Pages'),
                                          ('Minutes', 'Minutes'),
                                          ('Characters', 'Characters'),
