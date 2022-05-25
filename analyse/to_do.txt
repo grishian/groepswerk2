@@ -8,9 +8,9 @@ change_book: Hande
 
 unittests:
 	- views : grishian
-		- books
+		- books: go
 		- general
-			- search functie(nog niet af)
+			- search functie OK
 		- user
 		- wishlist
 	- models: hande

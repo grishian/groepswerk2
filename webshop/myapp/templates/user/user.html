@@ -2,24 +2,25 @@
 
 {% block main_content %}
 <h1>
-  {{current_user.username}}
+    {{current_user.username}}
 </h1>
 {% if current_user.is_author %}
 <div class="card border-danger mb-3" style="width: 18rem;">
-{% else %}
-<div class="card" style="width: 18rem;">
-{% endif %}
-    <div class="card-body">
-      <h5 class="card-title">Profile info</h5>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item"><p class="card-text">{{current_user.email}}</p></li>
-        <li class="list-group-item"><p class="card-text">Registered on **/**/****</p></li>
-        <li class="list-group-item"><p class="card-text">Books on wishlist: {{ count_wishlist_books }}</p></li>
-        {% if current_user.is_author %}
-        <li class="list-group-item"><p class="card-text" style="color: red;">This user is an Administrator.</p></li>
+    {% else %}
+    <div class="card" style="width: 18rem;">
         {% endif %}
-      </ul>
+        <div class="card-body">
+            <h5 class="card-title">Profile info</h5>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><p class="card-text">{{current_user.email}}</p></li>
+
+                <li class="list-group-item"><p class="card-text">Books on wishlist: {{ count_wishlist_books }}</p></li>
+                {% if current_user.is_author %}
+                <li class="list-group-item"><p class="card-text" style="color: red;">This user is an Administrator.</p>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
     </div>
-  </div>
-  <a class="btn btn-danger mt-3" href="{{ url_for('bp_user.do_change_password')}}" role="button">Change password</a>
-{% endblock %}
+    <a class="btn btn-danger mt-3" href="{{ url_for('bp_user.do_change_password')}}" role="button">Change password</a>
+    {% endblock %}
