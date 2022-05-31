@@ -73,7 +73,7 @@
                     <option value="{{ book.isbn }}">{{ book.title }}</option>
                     {% endfor %}
                 </select>
-                <button type="submit" class="btn btn-primary p-2 bd-highlight" ><i class="bi bi-search"></i></button>
+                <button type="submit" class="btn btn-primary p-2 bd-highlight"><i class="bi bi-search"></i></button>
             </div>
 
 
@@ -112,11 +112,13 @@
     <nav class="mt-2" aria-label="Page navigation example">
         <ul class="pagination">
             {% if prev_url %}
-            <li class="page-item"><a class="page-link" href="{{ prev_url }}"><i class="bi bi-caret-left-square"></i> Previous books</a></li>
+            <li class="page-item"><a class="page-link" href="{{ prev_url }}"><i class="bi bi-caret-left-square"></i>
+                Previous books</a></li>
             {% endif %}
 
             {% if next_url %}
-            <li class="page-item"><a class="page-link" href="{{ next_url }}">Next books <i class="bi bi-caret-right-square"></i></a></li>
+            <li class="page-item"><a class="page-link" href="{{ next_url }}">Next books <i
+                    class="bi bi-caret-right-square"></i></a></li>
             {% endif %}
         </ul>
     </nav>

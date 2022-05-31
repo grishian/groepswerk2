@@ -4,7 +4,6 @@
 {% block title_block %}Signup{% endblock %}
 
 
-
 {% block main_content %}
 
 <div class="page-header">
@@ -12,26 +11,37 @@
 </div>
 <div style="width:500px;">
     <form method="post" name="form-login">
-      {{ form.hidden_tag() }}
+        {{ form.hidden_tag() }}
 
-      <div class="row"><div class="col">
-        {{ form.email.label( class_="form-control-label") }} {{ form.email(placeholder="name@example.com", class_="form-control") }}<br>
-      </div></div>
-      <div class="row"><div class="col">
-        {{ form.username.label( class_="form-control-label") }} {{ form.username(placeholder="Your username", class_="form-control") }}<br>
-      </div></div>
-      <div class="row"><div class="col">
-        {{ form.password.label(class_="form-control-label") }} {{ form.password(placeholder="Your password", class_="form-control") }}<br>
-      </div></div>
+        <div class="row">
+            <div class="col">
+                {{ form.email.label( class_="form-control-label") }} {{ form.email(placeholder="name@example.com",
+                class_="form-control") }}<br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                {{ form.username.label( class_="form-control-label") }} {{ form.username(placeholder="Your username",
+                class_="form-control") }}<br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                {{ form.password.label(class_="form-control-label") }} {{ form.password(placeholder="Your password",
+                class_="form-control") }}<br>
+            </div>
+        </div>
 
-      <div class="tinyspace"></div>
-      <div class="row"><div class="col">
-      {{ form.submit(class_="btn btn-primary") }}
-     </div></div>
-  </form>
-  <p>
-    Already registered? Click <a href="{{url_for('bp_user.do_login')}}">here</a> to login.
-  </p>
+        <div class="tinyspace"></div>
+        <div class="row">
+            <div class="col">
+                {{ form.submit(class_="btn btn-primary") }}
+            </div>
+        </div>
+    </form>
+    <p>
+        Already registered? Click <a href="{{url_for('bp_user.do_login')}}">here</a> to login.
+    </p>
 </div>
 
 {% endblock %}
