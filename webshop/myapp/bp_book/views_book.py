@@ -3,12 +3,15 @@ from myapp.bp_book import bp_book
 from myapp.bp_book.model_book import Book
 from myapp.bp_book.form_book import BookForm
 from myapp.bp_user.model_user import only_admins
-from flask import render_template, redirect, url_for, flash, request
+from flask import render_template, redirect, url_for, flash
 
 
 @bp_book.route('/book/<isbn>')
 def do_book(isbn):
-
+    """
+    :param isbn: primary key of book
+    :return: webpage book/isbn
+    """
     book = Book.query.filter_by(isbn=isbn).first_or_404()
 
     return render_template('book/_book.html', book=book)
@@ -17,7 +20,6 @@ def do_book(isbn):
 @bp_book.route('/add_book', methods=["GET", "POST"])
 @only_admins
 def add_book():
-
     form = BookForm()
     if form.validate_on_submit():
         book = Book()
@@ -47,7 +49,6 @@ def add_book():
 @bp_book.route('/delete_book/<isbn>', methods=["GET", "POST"])
 @only_admins
 def delete_book(isbn):
-
     Book.query.filter_by(isbn=isbn).delete()
 
     db.session.commit()
@@ -59,12 +60,10 @@ def delete_book(isbn):
 @bp_book.route('/change_book/<isbn>', methods=["GET", "POST"])
 @only_admins
 def change_book(isbn):
-
     book = Book.query.filter_by(isbn=isbn).first()
 
     form = BookForm()
     if form.validate_on_submit():
-
         book.type = form.type.data
         book.title = form.title.data
         book.author = form.author.data

@@ -1,7 +1,6 @@
 import logging
 from functools import wraps
 from werkzeug.security import generate_password_hash, check_password_hash
-from werkzeug.urls import url_parse
 from flask_login import UserMixin, current_user
 from flask import abort
 from myapp import db, login_manager
@@ -22,7 +21,10 @@ class User(db.Model, UserMixin):
     # 1 - User
 
     def get_books_in_wishlist(self):
-
+        """
+        get all books of a user.
+        :return: a list of book objects.
+        """
         my_wishlist_book_ids = []
         my_wishlist_items = Wishlist.query.filter_by(user_id=self.id).all()
         for wishlist_item in my_wishlist_items:

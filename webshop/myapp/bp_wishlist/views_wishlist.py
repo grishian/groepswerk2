@@ -9,7 +9,6 @@ from myapp.bp_book.model_book import Book
 @bp_wishlist.route('/wishlist')
 @login_required
 def do_wishlist():
-
     books = current_user.get_books_in_wishlist()
 
     return render_template('wishlist/wishlist.html', books=books)
@@ -18,7 +17,11 @@ def do_wishlist():
 @bp_wishlist.route('/add_to_my_wishlist/<isbn>', methods=["GET", "POST"])
 @login_required
 def add_to_wishlist(isbn):
-
+    """
+    Adds book with isbn to wishlist. Only if book isn't already in wishlist.
+    :param isbn: primary key of book
+    :return: webpage /wishlist
+    """
     book = Book.query.filter_by(isbn=isbn).first_or_404()
     user_id = current_user.id
     my_wishlist_book_ids = []
@@ -28,7 +31,6 @@ def add_to_wishlist(isbn):
         my_wishlist_book_ids.append(wishlist_item.book_id)
 
     if not isbn in my_wishlist_book_ids:
-
         wishlist_item = Wishlist()
         wishlist_item.book_id = isbn
         wishlist_item.user_id = user_id
@@ -46,7 +48,11 @@ def add_to_wishlist(isbn):
 @bp_wishlist.route('/delete_from_my_wishlist/<isbn>', methods=["GET", "POST"])
 @login_required
 def delete_from_wishlist(isbn):
-
+    """
+    Deletes book with isbn from wishlist.
+    :param isbn: primary key of book
+    :return: webpage /wishlist
+    """
     book = Book.query.filter_by(isbn=isbn).first_or_404()
     user_id = current_user.id
     my_wishlist_book_ids = []
@@ -55,7 +61,6 @@ def delete_from_wishlist(isbn):
         my_wishlist_book_ids.append(wishlist_item.book_id)
 
     if isbn in my_wishlist_book_ids:
-
         Wishlist.query.filter_by(book_id=isbn).delete()
 
         db.session.commit()
@@ -65,7 +70,3 @@ def delete_from_wishlist(isbn):
 
     flash('Book: {} is not in your wishlist'.format(book.title), 'ERROR')
     return redirect(url_for('bp_wishlist.do_wishlist'))
-
-
-
-

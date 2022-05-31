@@ -1,5 +1,5 @@
 import logging
-from flask import render_template, abort, flash, redirect, url_for
+from flask import render_template, flash, redirect, url_for
 from flask_login import login_required, current_user, login_user, logout_user
 from myapp import db
 from myapp.bp_user import bp_user
@@ -12,7 +12,6 @@ from myapp.bp_user.form_user import LoginForm, SignUpForm, ChangePasswordForm
 def do_user():
     count_wishlist_books = Wishlist.query.filter_by(user_id=current_user.id).count()
     return render_template('user/user.html', count_wishlist_books=count_wishlist_books)
-
 
 
 @bp_user.route("/login", methods=["GET", "POST"])
@@ -31,7 +30,7 @@ def do_login():
                         db.session.add(current_user)
                         db.session.commit()
                         logout_user()
-                    except Exception as e:   # pragma: no cover
+                    except Exception as e:  # pragma: no cover
                         # if this fails we do not care, but we certainly do not want to block
                         # someone logging in
                         logging.info('Error during login (logout): {}'.format(e))
@@ -104,7 +103,6 @@ def do_change_password():
 
         if user.check_password(old_password):
             if new_password == repeat_password:
-
                 user.set_password(new_password)
                 db.session.commit()
 

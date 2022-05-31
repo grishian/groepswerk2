@@ -1,12 +1,16 @@
 from myapp.bp_general import bp_general
 from myapp.bp_book.model_book import Book
-from flask import render_template, url_for, flash, redirect, request
-from flask_login import current_user
+from flask import render_template, url_for, redirect, request
 
 
 @bp_general.route('/', methods=['GET', 'POST'])
 @bp_general.route('/index', methods=['GET', 'POST'])
 def do_home():
+    """
+    Display all books, using pagination.
+    When search is used: only display searched books.
+    :return: 'all books(pagination)' or 'searched books'
+    """
     all_books = Book.query.all()
     page = request.args.get('page', 1, type=int)
     books = Book.query.paginate(page, 3, False)
@@ -27,20 +31,18 @@ def do_home():
 
         if items is None:
             return redirect('/')
-        #when empty : method not allowed
+        # when empty : method not allowed
     return render_template('general/home.html', books=books, next_url=next_url, prev_url=prev_url,
                            all_books=all_books)
 
 
-@bp_general.route('/test/<items>')
-def do_test(items):
-    items = items
-
-    return render_template('test.html', items=items)
-
-
 @bp_general.route('/filter/<filter_by>', methods=['POST', 'GET'])
 def do_filter(filter_by):
+    """
+    Order and filter function.
+    :param filter_by: filter or order method.
+    :return: homepage with filtered or ordered books
+    """
     all_books = Book.query.all()
     page = request.args.get('page', 1, type=int)
 
