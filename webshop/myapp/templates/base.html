@@ -13,6 +13,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous"></script>
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 
 
 </head>
@@ -40,37 +42,37 @@
                 <li class="nav-item">
                     {% set url = url_for('bp_user.do_user') %}
                     <a class="nav-link{% if request.path == url %} active{% endif %}" aria-current="page"
-                       href="{{url}}">Profile
+                       href="{{url}}">Profile <i class="bi bi-person"></i>
                     </a>
                 </li>
                 <li class="nav-item">
                     {% set url = url_for('bp_wishlist.do_wishlist') %}
                     <a class="nav-link{% if request.path == url %} active{% endif %}" aria-current="page"
-                       href="{{url}}">Wishlist
+                       href="{{url}}">Wishlist <i class="bi bi-suit-heart"></i>
                     </a>
                 </li>
                 <li class="nav-item">
                     {% set url = url_for('bp_user.do_logout') %}
                     <a class="nav-link{% if request.path == url %} active{% endif %}" aria-current="page"
-                       href="{{url}}">Logout <i class="bi bi-box-arrow-in-right"></i></a>
+                       href="{{url}}">Logout <i class="bi bi-box-arrow-right"></i></a>
                 </li>
                 {% else %}
                 <li class="nav-item">
                     {% set url = url_for('bp_user.do_register') %}
                     <a class="nav-link{% if request.path == url %} active{% endif %}" aria-current="page"
-                       href="{{url}}"><i class="bi bi-box-arrow-in-left"></i> Register</a>
+                       href="{{url}}"><i class="bi bi-person-plus"></i> Register</a>
                 </li>
                 <li class="nav-item">
                     {% set url = url_for('bp_user.do_login') %}
                     <a class="nav-link{% if request.path == url %} active{% endif %}" aria-current="page"
-                       href="{{url}}"><i class="bi bi-box-arrow-in-left"></i> Login</a>
+                       href="{{url}}"><i class="bi bi-box-arrow-in-right"></i> Login</a>
                 </li>
                 {% endif %}
                 {% if current_user.is_author %}
                 <li class="nav-item">
                     {% set url = url_for('bp_book.add_book') %}
                     <a class="nav-link{% if request.path == url %} active{% endif %}" aria-current="page"
-                       href="{{url}}">|Add Book
+                       href="{{url}}">| Add Book
                     </a>
                 </li>
                 {% endif %}

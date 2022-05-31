@@ -27,18 +27,28 @@
         </a>
         <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='Action')}}">Action</a></li>
-            <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='Adventure')}}">Adventure</a></li>
+            <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='Adventure')}}">Adventure</a>
+            </li>
             <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='Comic')}}">Comic</a></li>
-            <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='Detective')}}">Detective</a></li>
-            <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='Fantasy')}}">Fantasy</a></li>
-            <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='History')}}">History</a></li>
+            <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='Detective')}}">Detective</a>
+            </li>
+            <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='Fantasy')}}">Fantasy</a>
+            </li>
+            <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='History')}}">History</a>
+            </li>
             <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='Horror')}}">Horror</a></li>
-            <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='Informative')}}">Informative</a></li>
-            <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='Non-fiction')}}">Non-fiction</a></li>
+            <li><a class="dropdown-item"
+                   href="{{url_for('bp_general.do_filter', filter_by='Informative')}}">Informative</a></li>
+            <li><a class="dropdown-item"
+                   href="{{url_for('bp_general.do_filter', filter_by='Non-fiction')}}">Non-fiction</a></li>
             <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='Poetry')}}">Poetry</a></li>
-            <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='Romance')}}">Romance</a></li>
-            <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='Science Fiction (Sci-Fi)')}}">Science Fiction (Sci-Fi)</a></li>
-            <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='Thriller')}}">Thriller</a></li>
+            <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='Romance')}}">Romance</a>
+            </li>
+            <li><a class="dropdown-item"
+                   href="{{url_for('bp_general.do_filter', filter_by='Science Fiction (Sci-Fi)')}}">Science Fiction
+                (Sci-Fi)</a></li>
+            <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='Thriller')}}">Thriller</a>
+            </li>
         </ul>
     </li>
     <li class="nav-item dropdown">
@@ -46,10 +56,12 @@
             Filter by type
         </a>
         <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='Physical book')}}">Physical book</a>
+            <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='Physical book')}}">Physical
+                book</a>
             </li>
             <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='E-book')}}">E-book</a></li>
-            <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='Audiobook')}}">Audiobook</a></li>
+            <li><a class="dropdown-item" href="{{url_for('bp_general.do_filter', filter_by='Audiobook')}}">Audiobook</a>
+            </li>
         </ul>
     </li>
     <li class="nav-item dropdown" style="width: 30%;">
@@ -61,7 +73,7 @@
                     <option value="{{ book.isbn }}">{{ book.title }}</option>
                     {% endfor %}
                 </select>
-                <button type="submit" class="btn btn-primary p-2 bd-highlight">Submit</button>
+                <button type="submit" class="btn btn-primary p-2 bd-highlight" ><i class="bi bi-search"></i></button>
             </div>
 
 
@@ -74,7 +86,7 @@
         {% for book in books %}
         <a href="{{ url_for('bp_book.do_book', isbn=book.isbn) }}" class="list-group-item list-group-item-action">
             <div class="d-flex align-items-stretch">
-                <img src="{{ book.cover }}" alt="{{book.title}}" style="width: 7%;">
+                <img src="{{ book.cover }}" alt="{{book.title}}" style="width: 10%;">
                 <div class="mx-3">
                     <h3>
                         {{book.title}}
@@ -96,12 +108,20 @@
         </a>
         {% endfor %}
     </div>
-    {% if prev_url %}
-    <a href="{{ prev_url }}"><-Previous books</a>
-    {% endif %}
-    {% if next_url %}
-    <a href="{{ next_url }}">Next books -></a>
-    {% endif %}
+
+    <nav class="mt-2" aria-label="Page navigation example">
+        <ul class="pagination">
+            {% if prev_url %}
+            <li class="page-item"><a class="page-link" href="{{ prev_url }}"><i class="bi bi-caret-left-square"></i> Previous books</a></li>
+            {% endif %}
+
+            {% if next_url %}
+            <li class="page-item"><a class="page-link" href="{{ next_url }}">Next books <i class="bi bi-caret-right-square"></i></a></li>
+            {% endif %}
+        </ul>
+    </nav>
+
+
 </div>
 
 <!-- slim select script -->
